@@ -8,7 +8,7 @@
 
 #import "TargetAddRecordViewController.h"
 #import "TargetLogsViewController.h"
-#import "TargetRecordAddLogTableViewCell.h"
+#import "TextViewTableViewCell.h"
 #import "HcdDateTimePickerView.h"
 #import "TargetRecordInsistHoursTableViewCell.h"
 #import "Target.h"
@@ -82,8 +82,8 @@
 
 - (void)rightItemAction {
     // 添加纪录
-    TargetRecordAddLogTableViewCell *cell = self.tableView.visibleCells[1];
-    self.log = cell.logTextView.text;
+    TextViewTableViewCell *cell = self.tableView.visibleCells[1];
+    self.log = cell.textView.text;
     
     self.target = [TargetRecordManager addTargetRecordAndReturnTargetWithTarget:self.target insistHours:self.insistHours log:self.log];
     if (self.updateTargetBlock) {
@@ -92,9 +92,6 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (void)enabledRightItem:(BOOL)enabled {
-    self.navigationItem.rightBarButtonItem.enabled = enabled;
-}
 
 #pragma mark UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -141,8 +138,8 @@
         
         return cell;
     } else if (indexPath.section == 1) {
-         TargetRecordAddLogTableViewCell *cell = [TargetRecordAddLogTableViewCell loadFromNib];
-        [cell.logTextView setPlaceHolder:@"输入你想说的"];
+         TextViewTableViewCell *cell = [TextViewTableViewCell loadFromNib];
+        [cell.textView setPlaceHolder:@"输入你想说的"];
         
         return cell;
     } else {

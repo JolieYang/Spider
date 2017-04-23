@@ -24,6 +24,8 @@
                                    action:(void (^)(void))firstActionBlock
                           secondImageName:(NSString *)secondImageName
                                    action:(void (^)(void))secondActionBlock;
+- (void)enabledRightItem:(BOOL)enabled;
+- (void)hideRightItem:(BOOL)hided;
 
 #pragma mark -- UIGestureRecognizer
 - (void)addResignKeyboardGestures;// 包括点击，上下滑动

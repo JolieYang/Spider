@@ -26,6 +26,7 @@ static char *secondRightActionBlockKey = "secondRightActionBlockKey";
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:color}];
 }
 
+
 - (void)customBackItemWithImageName:(NSString *)imageName
                              action:(void (^)(void))actionBlock
 {
@@ -53,7 +54,7 @@ static char *secondRightActionBlockKey = "secondRightActionBlockKey";
     [rightBtn setBackgroundImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
     [rightBtn addTarget:self action:@selector(rightItemAction) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *rightBarBtn = [[UIBarButtonItem alloc]initWithCustomView:rightBtn];;
-    self.navigationItem.rightBarButtonItems = @[rightBarBtn];
+    self.navigationItem.rightBarButtonItem = rightBarBtn;
 }
 
 - (void)systemRightItemWithImageName:(NSString *)imageName
@@ -131,6 +132,14 @@ static char *secondRightActionBlockKey = "secondRightActionBlockKey";
 
 - (void (^)())secondRightActionBlock {
     return  objc_getAssociatedObject(self, secondRightActionBlockKey);
+}
+
+- (void)enabledRightItem:(BOOL)enabled {
+    self.navigationItem.rightBarButtonItem.enabled = enabled;
+}
+
+- (void)hideRightItem:(BOOL)hided {
+    self.navigationItem.rightBarButtonItem.customView.hidden = hided;
 }
 
 #pragma mark -- UIGestureRecognizer

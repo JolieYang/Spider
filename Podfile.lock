@@ -19,6 +19,7 @@ PODS:
   - FMDB/standard (2.6.2)
   - GYDataCenter (0.1.1):
     - FMDB
+  - IQKeyboardManager (4.0.9)
   - MBProgressHUD (1.0.0)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
@@ -27,6 +28,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - GYDataCenter (~> 0.1.1)
+  - IQKeyboardManager (~> 4.0.9)
   - MBProgressHUD (~> 1.0.0)
   - SDWebImage (~> 4.0.0)
 
@@ -34,9 +36,10 @@ SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   GYDataCenter: 620dc2564589f50d2370a691303e0d7215f7c0af
+  IQKeyboardManager: 322c7405df3eb5f7e50dede32ea937bf3d4364e0
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
-PODFILE CHECKSUM: c069ec35e6755dab6a1bbe67e50891f908d5df4a
+PODFILE CHECKSUM: 26b7a9af78bbb6d5f3cdc277c36ec135d06c2cf4
 
 COCOAPODS: 1.2.1

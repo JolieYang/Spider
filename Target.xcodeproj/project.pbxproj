@@ -52,8 +52,6 @@
 		A03CD3671EAB89AC00152757 /* TargetLogHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A03CD3211EAB89AC00152757 /* TargetLogHeaderTableViewCell.xib */; };
 		A03CD3681EAB89AC00152757 /* TargetLogShowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD3231EAB89AC00152757 /* TargetLogShowTableViewCell.m */; };
 		A03CD3691EAB89AC00152757 /* TargetLogShowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A03CD3241EAB89AC00152757 /* TargetLogShowTableViewCell.xib */; };
-		A03CD36A1EAB89AC00152757 /* TargetRecordAddLogTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD3261EAB89AC00152757 /* TargetRecordAddLogTableViewCell.m */; };
-		A03CD36B1EAB89AC00152757 /* TargetRecordAddLogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A03CD3271EAB89AC00152757 /* TargetRecordAddLogTableViewCell.xib */; };
 		A03CD36C1EAB89AC00152757 /* TargetRecordInsistHoursTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD3291EAB89AC00152757 /* TargetRecordInsistHoursTableViewCell.m */; };
 		A03CD36D1EAB89AC00152757 /* TargetRecordInsistHoursTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A03CD32A1EAB89AC00152757 /* TargetRecordInsistHoursTableViewCell.xib */; };
 		A03CD36E1EAB89AC00152757 /* TargetShowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD32C1EAB89AC00152757 /* TargetShowTableViewCell.m */; };
@@ -64,6 +62,8 @@
 		A03CD3731EAB89AC00152757 /* StringHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD3361EAB89AC00152757 /* StringHelper.m */; };
 		A03CD3741EAB89AC00152757 /* TextViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD3381EAB89AC00152757 /* TextViewHelper.m */; };
 		A0BD7A991EACE34C00CB90B3 /* TargetTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BD7A981EACE34C00CB90B3 /* TargetTabBarViewController.m */; };
+		A0BD7A9E1EACFF0700CB90B3 /* TextViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BD7A9C1EACFF0700CB90B3 /* TextViewTableViewCell.m */; };
+		A0BD7A9F1EACFF0700CB90B3 /* TextViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0BD7A9D1EACFF0700CB90B3 /* TextViewTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,9 +158,6 @@
 		A03CD3221EAB89AC00152757 /* TargetLogShowTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetLogShowTableViewCell.h; sourceTree = "<group>"; };
 		A03CD3231EAB89AC00152757 /* TargetLogShowTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetLogShowTableViewCell.m; sourceTree = "<group>"; };
 		A03CD3241EAB89AC00152757 /* TargetLogShowTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TargetLogShowTableViewCell.xib; sourceTree = "<group>"; };
-		A03CD3251EAB89AC00152757 /* TargetRecordAddLogTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetRecordAddLogTableViewCell.h; sourceTree = "<group>"; };
-		A03CD3261EAB89AC00152757 /* TargetRecordAddLogTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetRecordAddLogTableViewCell.m; sourceTree = "<group>"; };
-		A03CD3271EAB89AC00152757 /* TargetRecordAddLogTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TargetRecordAddLogTableViewCell.xib; sourceTree = "<group>"; };
 		A03CD3281EAB89AC00152757 /* TargetRecordInsistHoursTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetRecordInsistHoursTableViewCell.h; sourceTree = "<group>"; };
 		A03CD3291EAB89AC00152757 /* TargetRecordInsistHoursTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetRecordInsistHoursTableViewCell.m; sourceTree = "<group>"; };
 		A03CD32A1EAB89AC00152757 /* TargetRecordInsistHoursTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TargetRecordInsistHoursTableViewCell.xib; sourceTree = "<group>"; };
@@ -180,6 +177,9 @@
 		A0BD7A971EACE34C00CB90B3 /* TargetTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetTabBarViewController.h; sourceTree = "<group>"; };
 		A0BD7A981EACE34C00CB90B3 /* TargetTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetTabBarViewController.m; sourceTree = "<group>"; };
 		A0BD7A9A1EACE48800CB90B3 /* Target-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Target-Prefix.pch"; sourceTree = "<group>"; };
+		A0BD7A9B1EACFF0700CB90B3 /* TextViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewTableViewCell.h; sourceTree = "<group>"; };
+		A0BD7A9C1EACFF0700CB90B3 /* TextViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewTableViewCell.m; sourceTree = "<group>"; };
+		A0BD7A9D1EACFF0700CB90B3 /* TextViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextViewTableViewCell.xib; sourceTree = "<group>"; };
 		E0EFF0F08275B19444604F12 /* Pods-Target.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Target.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Target/Pods-Target.debug.xcconfig"; sourceTree = "<group>"; };
 		EC48CC5D8A434BCADDDB44DD /* Pods-Target.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Target.release.xcconfig"; path = "Pods/Target Support Files/Pods-Target/Pods-Target.release.xcconfig"; sourceTree = "<group>"; };
 		F494DB1F4CD10C426CF9AD1F /* libPods-Target.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Target.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -309,6 +309,7 @@
 		A03CD2C81EAB89AC00152757 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A03CD2D11EAB89AC00152757 /* TableViewCell */,
 				A03CD2C91EAB89AC00152757 /* BaseTableView.h */,
 				A03CD2CA1EAB89AC00152757 /* BaseTableView.m */,
 				A03CD2CB1EAB89AC00152757 /* JYProgressHUD.h */,
@@ -317,7 +318,6 @@
 				A03CD2CE1EAB89AC00152757 /* OutAlertViewController.m */,
 				A03CD2CF1EAB89AC00152757 /* OutImageView.h */,
 				A03CD2D01EAB89AC00152757 /* OutImageView.m */,
-				A03CD2D11EAB89AC00152757 /* TableViewCell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -337,6 +337,9 @@
 				A03CD2DB1EAB89AC00152757 /* TextFieldTableViewCell.h */,
 				A03CD2DC1EAB89AC00152757 /* TextFieldTableViewCell.m */,
 				A03CD2DD1EAB89AC00152757 /* TextFieldTableViewCell.xib */,
+				A0BD7A9B1EACFF0700CB90B3 /* TextViewTableViewCell.h */,
+				A0BD7A9C1EACFF0700CB90B3 /* TextViewTableViewCell.m */,
+				A0BD7A9D1EACFF0700CB90B3 /* TextViewTableViewCell.xib */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -390,15 +393,15 @@
 		A03CD3031EAB89AC00152757 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A03CD3091EAB89AC00152757 /* TargetHomeNavigationController.h */,
+				A03CD30A1EAB89AC00152757 /* TargetHomeNavigationController.m */,
+				A03CD30B1EAB89AC00152757 /* TargetHomeViewController.h */,
+				A03CD30C1EAB89AC00152757 /* TargetHomeViewController.m */,
 				A03CD3041EAB89AC00152757 /* TargetAddRecordViewController.h */,
 				A03CD3051EAB89AC00152757 /* TargetAddRecordViewController.m */,
 				A03CD3061EAB89AC00152757 /* TargetAddRecordViewController.xib */,
 				A03CD3071EAB89AC00152757 /* TargetAddViewController.h */,
 				A03CD3081EAB89AC00152757 /* TargetAddViewController.m */,
-				A03CD3091EAB89AC00152757 /* TargetHomeNavigationController.h */,
-				A03CD30A1EAB89AC00152757 /* TargetHomeNavigationController.m */,
-				A03CD30B1EAB89AC00152757 /* TargetHomeViewController.h */,
-				A03CD30C1EAB89AC00152757 /* TargetHomeViewController.m */,
 				A03CD30D1EAB89AC00152757 /* TargetLogsViewController.h */,
 				A03CD30E1EAB89AC00152757 /* TargetLogsViewController.m */,
 				A03CD30F1EAB89AC00152757 /* TargetLogsViewController.xib */,
@@ -440,9 +443,6 @@
 			isa = PBXGroup;
 			children = (
 				A03CD31E1EAB89AC00152757 /* TargetLog */,
-				A03CD3251EAB89AC00152757 /* TargetRecordAddLogTableViewCell.h */,
-				A03CD3261EAB89AC00152757 /* TargetRecordAddLogTableViewCell.m */,
-				A03CD3271EAB89AC00152757 /* TargetRecordAddLogTableViewCell.xib */,
 				A03CD3281EAB89AC00152757 /* TargetRecordInsistHoursTableViewCell.h */,
 				A03CD3291EAB89AC00152757 /* TargetRecordInsistHoursTableViewCell.m */,
 				A03CD32A1EAB89AC00152757 /* TargetRecordInsistHoursTableViewCell.xib */,
@@ -585,6 +585,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A03CD36D1EAB89AC00152757 /* TargetRecordInsistHoursTableViewCell.xib in Resources */,
+				A0BD7A9F1EACFF0700CB90B3 /* TextViewTableViewCell.xib in Resources */,
 				A03CD3671EAB89AC00152757 /* TargetLogHeaderTableViewCell.xib in Resources */,
 				A03CD29E1EAA71F300152757 /* LaunchScreen.storyboard in Resources */,
 				A03CD3691EAB89AC00152757 /* TargetLogShowTableViewCell.xib in Resources */,
@@ -595,7 +596,6 @@
 				A03CD35B1EAB89AC00152757 /* TargetAddRecordViewController.xib in Resources */,
 				A03CD3471EAB89AC00152757 /* IconTextFieldTableViewCell.xib in Resources */,
 				A03CD34B1EAB89AC00152757 /* TextFieldTableViewCell.xib in Resources */,
-				A03CD36B1EAB89AC00152757 /* TargetRecordAddLogTableViewCell.xib in Resources */,
 				A03CD2991EAA71F300152757 /* Main.storyboard in Resources */,
 				A03CD3451EAB89AC00152757 /* CenterTitleTableViewCell.xib in Resources */,
 			);
@@ -694,6 +694,7 @@
 				A03CD33C1EAB89AC00152757 /* UIView+JY.m in Sources */,
 				A03CD3461EAB89AC00152757 /* IconTextFieldTableViewCell.m in Sources */,
 				A03CD3711EAB89AC00152757 /* JYFileManager.m in Sources */,
+				A0BD7A9E1EACFF0700CB90B3 /* TextViewTableViewCell.m in Sources */,
 				A03CD3481EAB89AC00152757 /* MonoTextViewTableViewCell.m in Sources */,
 				A03CD3741EAB89AC00152757 /* TextViewHelper.m in Sources */,
 				A03CD36E1EAB89AC00152757 /* TargetShowTableViewCell.m in Sources */,
@@ -703,7 +704,6 @@
 				A03CD3411EAB89AC00152757 /* JYProgressHUD.m in Sources */,
 				A03CD34A1EAB89AC00152757 /* TextFieldTableViewCell.m in Sources */,
 				A03CD35A1EAB89AC00152757 /* TargetAddRecordViewController.m in Sources */,
-				A03CD36A1EAB89AC00152757 /* TargetRecordAddLogTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

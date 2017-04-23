@@ -9,9 +9,8 @@
 
 #import "TargetAddViewController.h"
 #import "IconTextFieldTableViewCell.h"
-#import "MonoTextViewTableViewCell.h"
 #import "TextFieldTableViewCell.h"
-#import "TargetRecordAddLogTableViewCell.h"
+#import "TextViewTableViewCell.h"
 #import "Target.h"
 #import "TargetManager.h"
 #import "DateHelper.h"
@@ -19,6 +18,8 @@
 
 @interface TargetAddViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) NSString *targetName;
+@property (nonatomic, strong) NSString *encourage;
+@property (nonatomic, strong) NSString *remarks;
 @property (nonatomic, strong) UITableView *configTableView;
 @property (nonatomic, strong) UICollectionView *iconCollectionView;
 @end
@@ -40,7 +41,7 @@
     self.navigationController.navigationBar.barTintColor = System_Nav_White;
     [self setNavigationBarTitleColor:System_Nav_Gray];
     [self addDoneNavigationItem];
-    [self disableDoneBtn];
+    [self hideRightItem:YES];
     [self becomeFirstResponder];
 }
 
@@ -67,6 +68,10 @@
 
 - (void)doneItemAction {
     // 添加项目
+    if ([self.targetName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]].length == 0) {
+        [JYProgressHUD showTextHUDWithDetailString:@"请填写Target名称" AddedTo:self.view];
+        return;
+    }
     if (self.successAddTargetBlock) {
         self.successAddTargetBlock([self addedTarget]);
     }
@@ -85,11 +90,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        if (indexPath.row == 0) {
-            return 220;
-        } else {
-            return 58;
-        }
+        return 58;
     } else if(indexPath.section == 1) {
         return 140;
     }else {
@@ -103,26 +104,33 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
-            MonoTextViewTableViewCell *cell = [MonoTextViewTableViewCell loadFromNib];
-            
-            return cell;
-        } else if (indexPath.row == 1) {
             TextFieldTableViewCell *cell = [TextFieldTableViewCell loadFromNib];
             cell.textField.placeholder = @"Target名称，如看电影，跑步";
+            cell.textFieldDidChangeBlock = ^(NSString *text) {
+                self.targetName = text;
+                if (text.length > 0) {
+                    [self hideRightItem:NO];
+                } else {
+                    [self hideRightItem:YES];
+                }
+            };
             
             return cell;
-        } else if(indexPath.row == 2) {
+        } else if(indexPath.row == 1) {
             TextFieldTableViewCell *cell = [TextFieldTableViewCell loadFromNib];
             cell.textField.placeholder = @"一句激励自己的话";
+            cell.textFieldDidChangeBlock = ^(NSString *text) {
+                self.encourage = text;
+            };
             
             return cell;
         } else {
             
         }
     } else if(indexPath.section == 1) {
-        TargetRecordAddLogTableViewCell *cell = [TargetRecordAddLogTableViewCell loadFromNib];
-        cell.logTextView.font = [UIFont systemFontOfSize:14.0];
-        [cell.logTextView setPlaceHolder: @"描述这个Target"];
+        TextViewTableViewCell *cell = [TextViewTableViewCell loadFromNib];
+        cell.textView.font = [UIFont fontWithName:@"PingFangSC-Thin" size:14.0];
+        [cell.textView setPlaceHolder: @"描述这个Target"];
         
         return cell;
     } else {
@@ -137,9 +145,9 @@
             firstCell.textFieldDidChangeBlock = ^(NSString *text) {
                 self.targetName = text;
                 if (text.length > 0) {
-                    [self enableDoneBtn];
+                    [self hideRightItem:NO];
                 } else {
-                    [self disableDoneBtn];
+                    [self hideRightItem:YES];
                 }
             };
             return firstCell;
@@ -150,26 +158,28 @@
 }
 
 - (Target *)addedTarget {
-    return [TargetManager addTargetWithTargetName:self.targetName createUnix:[DateHelper getCurrentTimeInterval]];
+    Target *target = [[Target alloc] init];
+    target.targetName = self.targetName;
+    target.encourage = self.encourage;
+    target.remarks = self.remarks;
+    target.createUnix = [DateHelper getCurrentTimeInterval];
+    target.updateUnix = target.createUnix;
+    [TargetManager addTarget:target];
+    return target;
+    
+    
+//    return [TargetManager addTargetWithTargetName:self.targetName createUnix:[DateHelper getCurrentTimeInterval]];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0) {
-        return 3;
+        return 2;
     } else {
         return 1;
     }
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 2;
-}
-
-#pragma mark Tool
-- (void)enableDoneBtn {
-    [self.navigationItem.rightBarButtonItem setEnabled:YES];
-}
-- (void)disableDoneBtn {
-    [self.navigationItem.rightBarButtonItem setEnabled:NO];
 }
 
 @end

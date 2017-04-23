@@ -10,6 +10,7 @@
 #import "TargetAddRecordViewController.h"
 #import "TargetLogsViewController.h"
 #import "TargetShowTableViewCell.h"
+#import "CenterTitleTableViewCell.h"
 #import "TargetAddViewController.h"
 #import "TargetManager.h"
 #import "Target.h"
@@ -24,10 +25,11 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-    [self.tableView reloadData];
     self.title = @"Target";
     self.navigationController.navigationBar.barTintColor = System_Nav_Black;
     [self setNavigationBarTitleColor:System_Nav_White];
+    
+    [self.tableView reloadData];
 }
 
 - (void)viewDidLoad {
@@ -82,12 +84,24 @@
 }
 #pragma mark UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 16.0;
+    if (self.targetList.count) {
+        return 16.0;
+    } else {
+        return 0.0;
+    }
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 82;
+    if (self.targetList.count) {
+        return 82;
+    } else {
+        return kAppHeight-kTabbarHeight;
+    }
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (!self.targetList.count) {
+        [self jumpToTargetAddVC];
+        return;
+    }
     TargetAddRecordViewController *addRecordVC = [[TargetAddRecordViewController alloc] init];
     addRecordVC.hidesBottomBarWhenPushed = YES;
     addRecordVC.target = self.targetList[indexPath.section];
@@ -100,20 +114,28 @@
 
 #pragma mark UITableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *identifier = @"UITableViewCellIdentifier";
-    TargetShowTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    if (!cell) {
-        cell = [TargetShowTableViewCell loadFromNib];
+    if (self.targetList.count) {
+        TargetShowTableViewCell *cell = [TargetShowTableViewCell loadFromNib];
+        cell.dataModel = self.targetList[indexPath.section];
+        return cell;
+    } else {
+        CenterTitleTableViewCell *cell = [CenterTitleTableViewCell loadFromNib];
+        cell.titleLabel.text = @"空空如也，快来创建Target吧";
+        cell.titleLabel.textColor = Apple_Silver;
+        cell.titleLabel.font = [UIFont systemFontOfSize:14.0];
+        
+        return cell;
     }
-    cell.dataModel = self.targetList[indexPath.section];
-    
-    return cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 1;
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.targetList.count;
+    if (self.targetList.count) {
+        return self.targetList.count;
+    } else {
+        return 1;
+    }
 }
 @end

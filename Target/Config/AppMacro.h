@@ -61,7 +61,7 @@
 #define Running_Record_Take_Leave UIColorFromRGB(0x62A14E)
 
 #define System_Sub_Tone Swift_Orange
-#define System_Main_Tone Black2
+#define System_Main_Tone System_Black
 #define System_Nav_Black System_Main_Tone
 #define System_Nav_White System_White
 #define System_Nav_Gray Birthday_Icon_Gray
@@ -76,7 +76,7 @@
 #define White_Camera_Icon_Name @"white_camera"
 #define White_Detail_Icon_Name @"detail_icon"
 #define Gray_Nav_Back_Icon_Name @"gray_back"
-#define Gray_Nav_Check_Icon_Name @"gray_check"
+#define Gray_Nav_Check_Icon_Name @"gray_ok"
 
 #define Default_Image [UIImage imageNamed: @"tab_icon_01_normal"]
 #endif /* AppMacro_h */

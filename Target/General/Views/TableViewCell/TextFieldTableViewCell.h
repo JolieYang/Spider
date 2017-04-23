@@ -10,4 +10,6 @@
 
 @interface TextFieldTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UITextField *textField;
+
+@property (nonatomic, copy) void (^textFieldDidChangeBlock)(NSString *inputedText);
 @end

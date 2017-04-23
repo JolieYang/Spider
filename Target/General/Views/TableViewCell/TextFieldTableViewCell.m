@@ -13,6 +13,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeInputStatus) name:UITextFieldTextDidChangeNotification object:nil];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -22,4 +23,9 @@
     self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
+- (void)changeInputStatus {
+    if (self.textFieldDidChangeBlock) {
+        self.textFieldDidChangeBlock(_textField.text);// bug使用self.textFiled则在输入第一字时获取到的文本为空
+    }
+}
 @end

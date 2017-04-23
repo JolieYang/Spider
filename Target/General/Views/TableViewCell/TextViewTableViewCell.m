@@ -6,19 +6,19 @@
 //  Copyright © 2017年 Jolie_Yang. All rights reserved.
 //
 
-#import "TargetRecordAddLogTableViewCell.h"
+#import "TextViewTableViewCell.h"
 #import "UITextView+JY.h"
 
-@interface TargetRecordAddLogTableViewCell ()<UITextViewDelegate>
+@interface TextViewTableViewCell ()<UITextViewDelegate>
 
 @end
 
-@implementation TargetRecordAddLogTableViewCell
+@implementation TextViewTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    self.logTextView.delegate = self;
+    self.textView.delegate = self;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

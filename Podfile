@@ -3,5 +3,5 @@ target "Target" do
   pod 'MBProgressHUD', '~> 1.0.0'
   pod 'AFNetworking', '~> 3.1.0'
   pod 'SDWebImage', '~> 4.0.0'
-#  pod 'IQKeyboardManager', '~> 4.0.9'
+  pod 'IQKeyboardManager', '~> 4.0.9'
 end
