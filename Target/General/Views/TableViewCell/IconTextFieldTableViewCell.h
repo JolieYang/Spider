@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class JYImageView;
 
 @interface IconTextFieldTableViewCell : UITableViewCell
-@property (strong, nonatomic) IBOutlet UIImageView *iconImageView;
+@property (strong, nonatomic) IBOutlet JYImageView *iconImageView;
 @property (strong, nonatomic) IBOutlet UITextField *inputTextField;
 
 + (instancetype)reusableCellWithTableView:(UITableView *)tableView;

@@ -121,7 +121,7 @@
     } else {
         CenterTitleTableViewCell *cell = [CenterTitleTableViewCell loadFromNib];
         cell.titleLabel.text = @"空空如也，快来创建Target吧";
-        cell.titleLabel.textColor = Apple_Silver;
+        cell.titleLabel.textColor = Birthday_Gray;
         cell.titleLabel.font = [UIFont systemFontOfSize:14.0];
         
         return cell;

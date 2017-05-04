@@ -1,28 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="IconTextFieldTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="58"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="57"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tool_icon_01" translatesAutoresizingMaskIntoConstraints="NO" id="t90-lx-Pje">
-                        <rect key="frame" x="8" y="8" width="27" height="27"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qe4-rB-tCo">
+                        <rect key="frame" x="0.0" y="56" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.90746539829999995" green="0.89781779049999999" blue="0.89375543589999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="PEt-Jm-ZNk"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.92469114070000002" green="0.9219462276" blue="0.92479699849999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gray_target_icon" translatesAutoresizingMaskIntoConstraints="NO" id="t90-lx-Pje" customClass="JYImageView">
+                        <rect key="frame" x="14" y="11" width="36" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="36" id="FaS-WP-Unq"/>
+                            <constraint firstAttribute="width" constant="36" id="eos-Uk-OBI"/>
+                        </constraints>
                     </imageView>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入项目名称" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LeX-fZ-jIb">
-                        <rect key="frame" x="43" y="8" width="269" height="30"/>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入项目名称" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LeX-fZ-jIb">
+                        <rect key="frame" x="60" y="8" width="252" height="41"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="LeX-fZ-jIb" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="29s-ed-1Qw"/>
+                    <constraint firstItem="t90-lx-Pje" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="4rI-G7-JKs"/>
+                    <constraint firstItem="LeX-fZ-jIb" firstAttribute="leading" secondItem="t90-lx-Pje" secondAttribute="trailing" constant="11" id="5IM-y4-u2k"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="LeX-fZ-jIb" secondAttribute="bottom" id="ERy-Wz-6vS"/>
+                    <constraint firstItem="LeX-fZ-jIb" firstAttribute="leading" secondItem="t90-lx-Pje" secondAttribute="trailing" constant="10" id="Gmg-8v-rVs"/>
+                    <constraint firstItem="t90-lx-Pje" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="LbL-Ye-h1X"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="qe4-rB-tCo" secondAttribute="bottom" constant="-8" id="MR9-Oi-n2K"/>
+                    <constraint firstItem="LeX-fZ-jIb" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Oto-Y9-nQq"/>
+                    <constraint firstItem="LeX-fZ-jIb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="PYf-zx-m35"/>
+                    <constraint firstItem="t90-lx-Pje" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="Vcu-rZ-qZ3"/>
+                    <constraint firstItem="LeX-fZ-jIb" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="gIj-Ev-MkW"/>
+                    <constraint firstItem="t90-lx-Pje" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="6" id="hcG-ZU-D03"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="qe4-rB-tCo" secondAttribute="trailing" constant="-8" id="rji-Py-buG"/>
+                    <constraint firstItem="qe4-rB-tCo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="spK-cU-faM"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="4rI-G7-JKs"/>
+                        <exclude reference="Vcu-rZ-qZ3"/>
+                        <exclude reference="29s-ed-1Qw"/>
+                        <exclude reference="5IM-y4-u2k"/>
+                        <exclude reference="gIj-Ev-MkW"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="iconImageView" destination="t90-lx-Pje" id="RrA-7h-S5t"/>
@@ -32,6 +72,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="tool_icon_01" width="20" height="21"/>
+        <image name="gray_target_icon" width="24" height="24"/>
     </resources>
 </document>

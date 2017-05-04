@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -14,28 +14,27 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="209"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yellow_girl" translatesAutoresizingMaskIntoConstraints="NO" id="Fc0-1j-gL0">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="209"/>
-                    </imageView>
                     <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fmd-O9-I9M">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="209"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Target Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VP5-Mg-lPJ">
+                                <rect key="frame" x="8" y="91" width="304" height="27"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Target Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VP5-Mg-lPJ">
-                        <rect key="frame" x="8" y="91" width="304" height="27"/>
-                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="- 坚持了100小时 -" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qic-BA-KHR">
                         <rect key="frame" x="8" y="129" width="304" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYk-0N-GFp">
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYk-0N-GFp">
                         <rect key="frame" x="8" y="24" width="24" height="24"/>
-                        <state key="normal" image="picture_back"/>
+                        <state key="normal" image="white_back"/>
                         <connections>
                             <action selector="backAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="5DD-OJ-q5R"/>
                         </connections>
@@ -57,27 +56,21 @@
                 </subviews>
                 <color key="backgroundColor" red="0.1580955982208252" green="0.16767153143882751" blue="0.20991310477256775" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstItem="Fc0-1j-gL0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="5tE-Et-yWj"/>
                     <constraint firstItem="fmd-O9-I9M" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="TeH-Qq-Eee"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="Fc0-1j-gL0" secondAttribute="bottom" constant="-8" id="XvW-34-8fV"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="Fc0-1j-gL0" secondAttribute="trailing" constant="-8" id="fuU-I4-aIW"/>
                     <constraint firstItem="fmd-O9-I9M" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="m9u-kd-N8g"/>
                     <constraint firstAttribute="bottom" secondItem="fmd-O9-I9M" secondAttribute="bottom" id="nr7-9e-hb9"/>
                     <constraint firstAttribute="trailing" secondItem="fmd-O9-I9M" secondAttribute="trailing" id="upv-bM-lBD"/>
-                    <constraint firstItem="Fc0-1j-gL0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="wF4-uW-DkF"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="insistHoursLabel" destination="Qic-BA-KHR" id="xoH-XW-8k0"/>
                 <outlet property="remarksLabel" destination="Akg-X0-26D" id="udn-vM-PdA"/>
-                <outlet property="targetBgImageView" destination="Fc0-1j-gL0" id="091-bA-1s7"/>
                 <outlet property="targetNameLable" destination="VP5-Mg-lPJ" id="ppy-qb-jlW"/>
             </connections>
             <point key="canvasLocation" x="280" y="334"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="picture_back" width="22" height="22"/>
-        <image name="yellow_girl" width="450" height="531"/>
+        <image name="white_back" width="22" height="22"/>
     </resources>
 </document>

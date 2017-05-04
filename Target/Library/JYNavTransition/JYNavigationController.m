@@ -30,6 +30,7 @@
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    [self clearCurrentScreenShot];
     if (self.viewControllers.count > 0 && self.popCount != 1) {
         UIImage *screenShot = [self screenShot];
         [self.screenShots addObject:screenShot];

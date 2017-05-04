@@ -11,6 +11,11 @@
 		A034A7371EBAC1EE0012AB81 /* JYNavAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A034A7321EBAC1EE0012AB81 /* JYNavAnimation.m */; };
 		A034A7381EBAC1EE0012AB81 /* JYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A034A7341EBAC1EE0012AB81 /* JYNavigationController.m */; };
 		A034A7391EBAC1EE0012AB81 /* JYNavInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = A034A7361EBAC1EE0012AB81 /* JYNavInteractiveTransition.m */; };
+		A034A7451EBB00C40012AB81 /* IconTextViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A034A7431EBB00C40012AB81 /* IconTextViewTableViewCell.m */; };
+		A034A7461EBB00C40012AB81 /* IconTextViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A034A7441EBB00C40012AB81 /* IconTextViewTableViewCell.xib */; };
+		A034A7491EBB0CB30012AB81 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A034A7471EBB0BF30012AB81 /* Photos.framework */; };
+		A034A74C1EBB19C00012AB81 /* NSString+JY.m in Sources */ = {isa = PBXBuildFile; fileRef = A034A74B1EBB19C00012AB81 /* NSString+JY.m */; };
+		A034A74F1EBB1D950012AB81 /* UIImageView+JY.m in Sources */ = {isa = PBXBuildFile; fileRef = A034A74E1EBB1D950012AB81 /* UIImageView+JY.m */; };
 		A03CD2901EAA71F300152757 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD28F1EAA71F300152757 /* main.m */; };
 		A03CD2931EAA71F300152757 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD2921EAA71F300152757 /* AppDelegate.m */; };
 		A03CD2991EAA71F300152757 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A03CD2971EAA71F300152757 /* Main.storyboard */; };
@@ -22,11 +27,10 @@
 		A03CD33B1EAB89AC00152757 /* UITextView+PlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD2BE1EAB89AC00152757 /* UITextView+PlaceHolder.m */; };
 		A03CD33C1EAB89AC00152757 /* UIView+JY.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD2C01EAB89AC00152757 /* UIView+JY.m */; };
 		A03CD33E1EAB89AC00152757 /* UIViewController+JY.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD2C41EAB89AC00152757 /* UIViewController+JY.m */; };
-		A03CD33F1EAB89AC00152757 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD2C71EAB89AC00152757 /* BaseNavigationController.m */; };
 		A03CD3401EAB89AC00152757 /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD2CA1EAB89AC00152757 /* BaseTableView.m */; };
 		A03CD3411EAB89AC00152757 /* JYProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD2CC1EAB89AC00152757 /* JYProgressHUD.m */; };
 		A03CD3421EAB89AC00152757 /* OutAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD2CE1EAB89AC00152757 /* OutAlertViewController.m */; };
-		A03CD3431EAB89AC00152757 /* OutImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD2D01EAB89AC00152757 /* OutImageView.m */; };
+		A03CD3431EAB89AC00152757 /* JYImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD2D01EAB89AC00152757 /* JYImageView.m */; };
 		A03CD3441EAB89AC00152757 /* CenterTitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD2D31EAB89AC00152757 /* CenterTitleTableViewCell.m */; };
 		A03CD3451EAB89AC00152757 /* CenterTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A03CD2D41EAB89AC00152757 /* CenterTitleTableViewCell.xib */; };
 		A03CD3461EAB89AC00152757 /* IconTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD2D61EAB89AC00152757 /* IconTextFieldTableViewCell.m */; };
@@ -84,6 +88,14 @@
 		A034A7341EBAC1EE0012AB81 /* JYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYNavigationController.m; sourceTree = "<group>"; };
 		A034A7351EBAC1EE0012AB81 /* JYNavInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYNavInteractiveTransition.h; sourceTree = "<group>"; };
 		A034A7361EBAC1EE0012AB81 /* JYNavInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYNavInteractiveTransition.m; sourceTree = "<group>"; };
+		A034A7421EBB00C40012AB81 /* IconTextViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconTextViewTableViewCell.h; sourceTree = "<group>"; };
+		A034A7431EBB00C40012AB81 /* IconTextViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconTextViewTableViewCell.m; sourceTree = "<group>"; };
+		A034A7441EBB00C40012AB81 /* IconTextViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IconTextViewTableViewCell.xib; sourceTree = "<group>"; };
+		A034A7471EBB0BF30012AB81 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		A034A74A1EBB19C00012AB81 /* NSString+JY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JY.h"; sourceTree = "<group>"; };
+		A034A74B1EBB19C00012AB81 /* NSString+JY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JY.m"; sourceTree = "<group>"; };
+		A034A74D1EBB1D950012AB81 /* UIImageView+JY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+JY.h"; sourceTree = "<group>"; };
+		A034A74E1EBB1D950012AB81 /* UIImageView+JY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+JY.m"; sourceTree = "<group>"; };
 		A03CD28B1EAA71F300152757 /* Target.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Target.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A03CD28F1EAA71F300152757 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A03CD2911EAA71F300152757 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -107,16 +119,14 @@
 		A03CD2C01EAB89AC00152757 /* UIView+JY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JY.m"; sourceTree = "<group>"; };
 		A03CD2C31EAB89AC00152757 /* UIViewController+JY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JY.h"; sourceTree = "<group>"; };
 		A03CD2C41EAB89AC00152757 /* UIViewController+JY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JY.m"; sourceTree = "<group>"; };
-		A03CD2C61EAB89AC00152757 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
-		A03CD2C71EAB89AC00152757 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		A03CD2C91EAB89AC00152757 /* BaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableView.h; sourceTree = "<group>"; };
 		A03CD2CA1EAB89AC00152757 /* BaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableView.m; sourceTree = "<group>"; };
 		A03CD2CB1EAB89AC00152757 /* JYProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYProgressHUD.h; sourceTree = "<group>"; };
 		A03CD2CC1EAB89AC00152757 /* JYProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYProgressHUD.m; sourceTree = "<group>"; };
 		A03CD2CD1EAB89AC00152757 /* OutAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutAlertViewController.h; sourceTree = "<group>"; };
 		A03CD2CE1EAB89AC00152757 /* OutAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutAlertViewController.m; sourceTree = "<group>"; };
-		A03CD2CF1EAB89AC00152757 /* OutImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutImageView.h; sourceTree = "<group>"; };
-		A03CD2D01EAB89AC00152757 /* OutImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutImageView.m; sourceTree = "<group>"; };
+		A03CD2CF1EAB89AC00152757 /* JYImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYImageView.h; sourceTree = "<group>"; };
+		A03CD2D01EAB89AC00152757 /* JYImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYImageView.m; sourceTree = "<group>"; };
 		A03CD2D21EAB89AC00152757 /* CenterTitleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterTitleTableViewCell.h; sourceTree = "<group>"; };
 		A03CD2D31EAB89AC00152757 /* CenterTitleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenterTitleTableViewCell.m; sourceTree = "<group>"; };
 		A03CD2D41EAB89AC00152757 /* CenterTitleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CenterTitleTableViewCell.xib; sourceTree = "<group>"; };
@@ -193,6 +203,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A034A7491EBB0CB30012AB81 /* Photos.framework in Frameworks */,
 				1B144A055B212CFF43401465 /* libPods-Target.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,7 +301,6 @@
 			isa = PBXGroup;
 			children = (
 				A03CD2B81EAB89AC00152757 /* Categories */,
-				A03CD2C51EAB89AC00152757 /* ViewControllers */,
 				A03CD2C81EAB89AC00152757 /* Views */,
 			);
 			path = General;
@@ -309,17 +319,12 @@
 				A03CD2C01EAB89AC00152757 /* UIView+JY.m */,
 				A03CD2C31EAB89AC00152757 /* UIViewController+JY.h */,
 				A03CD2C41EAB89AC00152757 /* UIViewController+JY.m */,
+				A034A74A1EBB19C00012AB81 /* NSString+JY.h */,
+				A034A74B1EBB19C00012AB81 /* NSString+JY.m */,
+				A034A74D1EBB1D950012AB81 /* UIImageView+JY.h */,
+				A034A74E1EBB1D950012AB81 /* UIImageView+JY.m */,
 			);
 			path = Categories;
-			sourceTree = "<group>";
-		};
-		A03CD2C51EAB89AC00152757 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				A03CD2C61EAB89AC00152757 /* BaseNavigationController.h */,
-				A03CD2C71EAB89AC00152757 /* BaseNavigationController.m */,
-			);
-			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		A03CD2C81EAB89AC00152757 /* Views */ = {
@@ -332,8 +337,8 @@
 				A03CD2CC1EAB89AC00152757 /* JYProgressHUD.m */,
 				A03CD2CD1EAB89AC00152757 /* OutAlertViewController.h */,
 				A03CD2CE1EAB89AC00152757 /* OutAlertViewController.m */,
-				A03CD2CF1EAB89AC00152757 /* OutImageView.h */,
-				A03CD2D01EAB89AC00152757 /* OutImageView.m */,
+				A03CD2CF1EAB89AC00152757 /* JYImageView.h */,
+				A03CD2D01EAB89AC00152757 /* JYImageView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -344,18 +349,21 @@
 				A03CD2D21EAB89AC00152757 /* CenterTitleTableViewCell.h */,
 				A03CD2D31EAB89AC00152757 /* CenterTitleTableViewCell.m */,
 				A03CD2D41EAB89AC00152757 /* CenterTitleTableViewCell.xib */,
-				A03CD2D51EAB89AC00152757 /* IconTextFieldTableViewCell.h */,
-				A03CD2D61EAB89AC00152757 /* IconTextFieldTableViewCell.m */,
-				A03CD2D71EAB89AC00152757 /* IconTextFieldTableViewCell.xib */,
 				A03CD2D81EAB89AC00152757 /* MonoTextViewTableViewCell.h */,
 				A03CD2D91EAB89AC00152757 /* MonoTextViewTableViewCell.m */,
 				A03CD2DA1EAB89AC00152757 /* MonoTextViewTableViewCell.xib */,
 				A03CD2DB1EAB89AC00152757 /* TextFieldTableViewCell.h */,
 				A03CD2DC1EAB89AC00152757 /* TextFieldTableViewCell.m */,
 				A03CD2DD1EAB89AC00152757 /* TextFieldTableViewCell.xib */,
+				A03CD2D51EAB89AC00152757 /* IconTextFieldTableViewCell.h */,
+				A03CD2D61EAB89AC00152757 /* IconTextFieldTableViewCell.m */,
+				A03CD2D71EAB89AC00152757 /* IconTextFieldTableViewCell.xib */,
 				A0BD7A9B1EACFF0700CB90B3 /* TextViewTableViewCell.h */,
 				A0BD7A9C1EACFF0700CB90B3 /* TextViewTableViewCell.m */,
 				A0BD7A9D1EACFF0700CB90B3 /* TextViewTableViewCell.xib */,
+				A034A7421EBB00C40012AB81 /* IconTextViewTableViewCell.h */,
+				A034A7431EBB00C40012AB81 /* IconTextViewTableViewCell.m */,
+				A034A7441EBB00C40012AB81 /* IconTextViewTableViewCell.xib */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -500,6 +508,7 @@
 		F4758AB8333C01A9515B0A3B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A034A7471EBB0BF30012AB81 /* Photos.framework */,
 				F494DB1F4CD10C426CF9AD1F /* libPods-Target.a */,
 			);
 			name = Frameworks;
@@ -597,6 +606,7 @@
 				A03CD29B1EAA71F300152757 /* Assets.xcassets in Resources */,
 				A03CD3601EAB89AC00152757 /* TargetLogsViewController.xib in Resources */,
 				A03CD36F1EAB89AC00152757 /* TargetShowTableViewCell.xib in Resources */,
+				A034A7461EBB00C40012AB81 /* IconTextViewTableViewCell.xib in Resources */,
 				A03CD3491EAB89AC00152757 /* MonoTextViewTableViewCell.xib in Resources */,
 				A03CD35B1EAB89AC00152757 /* TargetAddRecordViewController.xib in Resources */,
 				A03CD3471EAB89AC00152757 /* IconTextFieldTableViewCell.xib in Resources */,
@@ -658,7 +668,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -668,7 +678,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A03CD3431EAB89AC00152757 /* OutImageView.m in Sources */,
+				A03CD3431EAB89AC00152757 /* JYImageView.m in Sources */,
 				A03CD35C1EAB89AC00152757 /* TargetAddViewController.m in Sources */,
 				A03CD3611EAB89AC00152757 /* TargetManager.m in Sources */,
 				A03CD35F1EAB89AC00152757 /* TargetLogsViewController.m in Sources */,
@@ -678,9 +688,9 @@
 				A03CD3641EAB89AC00152757 /* TargetRecord.m in Sources */,
 				A034A7371EBAC1EE0012AB81 /* JYNavAnimation.m in Sources */,
 				A03CD33B1EAB89AC00152757 /* UITextView+PlaceHolder.m in Sources */,
+				A034A74F1EBB1D950012AB81 /* UIImageView+JY.m in Sources */,
 				A03CD3631EAB89AC00152757 /* Target.m in Sources */,
 				A03CD35D1EAB89AC00152757 /* TargetHomeNavigationController.m in Sources */,
-				A03CD33F1EAB89AC00152757 /* BaseNavigationController.m in Sources */,
 				A03CD3661EAB89AC00152757 /* TargetLogHeaderTableViewCell.m in Sources */,
 				A03CD35E1EAB89AC00152757 /* TargetHomeViewController.m in Sources */,
 				A03CD3421EAB89AC00152757 /* OutAlertViewController.m in Sources */,
@@ -708,7 +718,9 @@
 				A034A7381EBAC1EE0012AB81 /* JYNavigationController.m in Sources */,
 				A03CD3701EAB89AC00152757 /* DateHelper.m in Sources */,
 				A03CD3411EAB89AC00152757 /* JYProgressHUD.m in Sources */,
+				A034A7451EBB00C40012AB81 /* IconTextViewTableViewCell.m in Sources */,
 				A03CD34A1EAB89AC00152757 /* TextFieldTableViewCell.m in Sources */,
+				A034A74C1EBB19C00012AB81 /* NSString+JY.m in Sources */,
 				A03CD35A1EAB89AC00152757 /* TargetAddRecordViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

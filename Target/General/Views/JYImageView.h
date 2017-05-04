@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 typedef void (^TapAction)(void);
-@interface OutImageView : UIImageView
+@interface JYImageView : UIImageView
 
 @property (nonatomic, strong) TapAction tapAction;
 

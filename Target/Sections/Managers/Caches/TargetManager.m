@@ -25,15 +25,6 @@
     
     return target;
 }
-+ (Target *)addTargetWithTargetName:(NSString *)targetName IconName:(NSString *)iconName {
-    Target *target = [[Target alloc] init];
-    target.targetName = targetName;
-    target.createUnix = [DateHelper getCurrentTimeInterval];
-    target.iconName = iconName;
-    [target save];
-    
-    return target;
-}
 
 #pragma mark G
 + (NSArray *)getTargetList {

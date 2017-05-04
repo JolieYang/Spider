@@ -27,7 +27,7 @@
                     </label>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入项目名称" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Nm-Kk-WP5">
                         <rect key="frame" x="8" y="3" width="304" height="53"/>
-                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                 </subviews>

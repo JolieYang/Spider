@@ -32,9 +32,9 @@
                       @"updateUnix",
                       @"insistDays",
                       @"insistHours",
-                      @"iconName",
                       @"status",
-                      @"remarks"
+                      @"remarks",
+                      @"targetIcon"
                       ];
     }
     return propertis;

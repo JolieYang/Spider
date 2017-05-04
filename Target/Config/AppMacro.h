@@ -33,6 +33,8 @@
 #define LIMIT_TEXT_LENGTH 100
 
 // 颜色
+#define Gray_Target_Color UIColorFromRGB(0x959595)
+
 #define Black1 UIColorFromRGB(0x474749)
 #define Black2 UIColorFromRGB(0x24252C)
 #define System_Black UIColorFromRGB(0x28292B)// 导航栏设置该颜色，渲染后的颜色为Black1
@@ -46,6 +48,7 @@
 #define Apple_RoseGold UIColorFromRGB(0xCBB0A9)
 #define Apple_Black UIColorFromRGB(0x383A3E)
 #define Swift_Orange UIColorFromRGB(0xE38D46)
+#define Apple_PlaceHoder_Gray UIColorFromRGB(0xCCCCD1)
 
 #define Birthday_Bg_Gray UIColorFromRGB(0x5E5E5E)
 #define Birthday_Icon_Gray UIColorFromRGB(0x737373)
@@ -78,5 +81,5 @@
 #define Gray_Nav_Back_Icon_Name @"gray_back"
 #define Gray_Nav_Check_Icon_Name @"gray_ok"
 
-#define Default_Image [UIImage imageNamed: @"tab_icon_01_normal"]
+#define Default_Image [UIImage imageNamed: @"gray_target_icon"]
 #endif /* AppMacro_h */

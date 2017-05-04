@@ -95,7 +95,10 @@
 
 #pragma mark UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 8;
+    if (section == 0) {
+        return 0;
+    }
+    return 4.0;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -127,7 +130,7 @@
             NSInteger minute = [array[1] integerValue];
             if (hour == 0 && minute == 0) {
                 cell.insistHoursLable.text = @"坚持了多久";
-                cell.insistHoursLable.textColor = [UIColor lightGrayColor];
+                cell.insistHoursLable.textColor = Apple_PlaceHoder_Gray;
             } else {
                 cell.insistHoursLable.text = [NSString stringWithFormat:@"坚持了%ld小时%ld分钟", (long)hour, (long)minute];
                 cell.insistHoursLable.textColor = [UIColor blackColor];

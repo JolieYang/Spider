@@ -43,7 +43,12 @@
     }
     self.beginTimeLabel.text = [DateHelper dateStringFromTimeInterval: dataModel.createUnix dateFormat:@"从yyyy年MM月dd日"];
     self.targetNameLabel.text = dataModel.targetName;
-    self.iconImageView.image = dataModel.iconName == nil?Default_Image: [UIImage imageNamed:dataModel.iconName];
+    if (dataModel.targetIcon) {
+        [self.iconImageView round];
+        self.iconImageView.image = dataModel.targetIcon;
+    } else {
+        self.iconImageView.image = Default_Image;
+    }
 }
 
 @end

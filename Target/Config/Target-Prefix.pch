@@ -16,6 +16,8 @@
 #import "JYProgressHUD.h"
 #import "UIView+JY.h"
 #import "UIViewController+JY.h"
+#import "NSString+JY.h"
+#import "UIImageView+JY.h"
 #import "JYProgressHUD.h"
 
 #endif /* Target_Prefix_pch */

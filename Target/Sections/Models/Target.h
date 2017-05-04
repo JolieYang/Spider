@@ -17,9 +17,7 @@
 @property (nonatomic, assign) NSTimeInterval updateUnix;// 项目最近更新时间
 @property (nonatomic, assign) NSInteger insistDays;
 @property (nonatomic, assign) float insistHours;// 保留到小数点后一位
-@property (nonatomic, strong) NSString *iconName;
 @property (nonatomic, assign) NSInteger status; // 项目状态 0尚未开始  1进行中 2暂停
-@property (nonatomic, strong) NSString *encourage;// 鼓励自己的话
 @property (nonatomic, strong) NSString *remarks;
-
+@property (nonatomic, strong) UIImage *targetIcon;
 @end

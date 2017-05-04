@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "TargetTabBarViewController.h"
+#import "TargetHomeNavigationController.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    TargetTabBarViewController *vc = [[TargetTabBarViewController alloc] init];
+    TargetHomeNavigationController *vc = [[TargetHomeNavigationController alloc] init];
     self.window.rootViewController = vc;
     
     [self.window makeKeyAndVisible];

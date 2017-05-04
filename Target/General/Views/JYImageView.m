@@ -6,9 +6,9 @@
 //  Copyright © 2016年 Jolie_Yang. All rights reserved.
 //
 
-#import "OutImageView.h"
+#import "JYImageView.h"
 
-@implementation OutImageView
+@implementation JYImageView
 
 
 - (void)tapGestureWithBlock:(void (^)())tapHandler {

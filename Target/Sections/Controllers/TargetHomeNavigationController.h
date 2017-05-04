@@ -6,7 +6,6 @@
 //  Copyright © 2017年 Jolie_Yang. All rights reserved.
 //
 
-#import "BaseNavigationController.h"
 #import "JYNavigationController.h"
 
 @interface TargetHomeNavigationController: JYNavigationController

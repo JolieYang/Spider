@@ -14,7 +14,7 @@
 #define LeftSpacing 20
 #define RightSpacing 20
 #define TopSpacing 43
-#define BottomSpacing 18
+#define BottomSpacing 12
 
 @interface TargetLogShowTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *logLabel;
