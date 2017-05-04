@@ -16,6 +16,15 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeInputStatus) name:UITextFieldTextDidChangeNotification object:nil];
 }
 
++ (instancetype)reusableCellWithTableView:(UITableView *)tableView {
+    TextFieldTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([self class])];
+    if (!cell) {
+        cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] firstObject];
+    }
+    
+    return cell;
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

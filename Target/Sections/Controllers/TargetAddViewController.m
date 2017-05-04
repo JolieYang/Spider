@@ -89,9 +89,9 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0) {
+    if (indexPath.section == 0 || indexPath.section == 1) {
         return 58;
-    } else if(indexPath.section == 1) {
+    } else if(indexPath.section == 2) {
         return 140;
     }else {
         return 0;
@@ -100,61 +100,58 @@
 
 #pragma mark UITableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *identifier = @"UITableViewCellIdentifier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    if (indexPath.section == 0) {
-        if (indexPath.row == 0) {
-            TextFieldTableViewCell *cell = [TextFieldTableViewCell loadFromNib];
+    __weak typeof(self) weakSelf = self;
+    
+    if (indexPath.section == 0 || indexPath.section == 1) {
+        
+        TextFieldTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([TextFieldTableViewCell class])];
+        if (!cell) {
+            cell = [TextFieldTableViewCell loadFromNib];
+        }
+        if (indexPath.section == 0) {
             cell.textField.placeholder = @"Target名称，如看电影，跑步";
             cell.textFieldDidChangeBlock = ^(NSString *text) {
-                self.targetName = text;
+                weakSelf.targetName = text;
                 if (text.length > 0) {
-                    [self hideRightItem:NO];
+                    [weakSelf hideRightItem:NO];
                 } else {
-                    [self hideRightItem:YES];
+                    [weakSelf hideRightItem:YES];
                 }
-            };
-            
-            return cell;
-        } else if(indexPath.row == 1) {
-            TextFieldTableViewCell *cell = [TextFieldTableViewCell loadFromNib];
-            cell.textField.placeholder = @"一句激励自己的话";
-            cell.textFieldDidChangeBlock = ^(NSString *text) {
-                self.encourage = text;
             };
             
             return cell;
         } else {
+            cell.textField.placeholder = @"一句激励自己的话";
+            cell.textFieldDidChangeBlock = ^(NSString *text) {
+                weakSelf.encourage = text;
+            };
             
+            return cell;
         }
-    } else if(indexPath.section == 1) {
+    } else if(indexPath.section == 2) {
         TextViewTableViewCell *cell = [TextViewTableViewCell loadFromNib];
         cell.textView.font = [UIFont fontWithName:@"PingFangSC-Thin" size:14.0];
         [cell.textView setPlaceHolder: @"描述这个Target"];
         
+        NSLog(@"cell visible:%lu", tableView.visibleCells.count);
         return cell;
     } else {
-        
-        if (indexPath.row == 0) {
-            IconTextFieldTableViewCell *firstCell = [IconTextFieldTableViewCell loadFromNib];
-            firstCell.iconImageView.image = Default_Image;
-            firstCell.inputTextField.returnKeyType = UIReturnKeyDone;
-            firstCell.textFieldReturnBlock = ^(NSString *text) {
-                [self.view endEditing:YES];
-            };
-            firstCell.textFieldDidChangeBlock = ^(NSString *text) {
-                self.targetName = text;
-                if (text.length > 0) {
-                    [self hideRightItem:NO];
-                } else {
-                    [self hideRightItem:YES];
-                }
-            };
-            return firstCell;
-        }
+        IconTextFieldTableViewCell *firstCell = [IconTextFieldTableViewCell loadFromNib];
+        firstCell.iconImageView.image = Default_Image;
+        firstCell.inputTextField.returnKeyType = UIReturnKeyDone;
+        firstCell.textFieldReturnBlock = ^(NSString *text) {
+            [self.view endEditing:YES];
+        };
+        firstCell.textFieldDidChangeBlock = ^(NSString *text) {
+            self.targetName = text;
+            if (text.length > 0) {
+                [self hideRightItem:NO];
+            } else {
+                [self hideRightItem:YES];
+            }
+        };
+        return firstCell;
     }
-    
-    return cell;
 }
 
 - (Target *)addedTarget {
@@ -166,20 +163,13 @@
     target.updateUnix = target.createUnix;
     [TargetManager addTarget:target];
     return target;
-    
-    
-//    return [TargetManager addTargetWithTargetName:self.targetName createUnix:[DateHelper getCurrentTimeInterval]];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (section == 0) {
-        return 2;
-    } else {
-        return 1;
-    }
+    return 1;
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 3;
 }
 
 @end

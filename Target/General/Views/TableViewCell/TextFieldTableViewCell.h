@@ -12,4 +12,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 
 @property (nonatomic, copy) void (^textFieldDidChangeBlock)(NSString *inputedText);
+
++ (instancetype)reusableCellWithTableView:(UITableView *)tableView;
 @end

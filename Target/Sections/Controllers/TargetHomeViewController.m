@@ -94,7 +94,7 @@
     if (self.targetList.count) {
         return 82;
     } else {
-        return kAppHeight-kTabbarHeight;
+        return kAppHeight-kTabbarHeight-kNavigationBarHeight-kStatusHeight;
     }
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

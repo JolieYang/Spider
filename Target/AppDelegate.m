@@ -4,7 +4,7 @@
 //
 //  Created by Jolie on 2017/4/22.
 //  Copyright © 2017年 JolieYang. All rights reserved.
-//
+//  com.jolie.Target   jolie_yang@163.com
 
 #import "AppDelegate.h"
 #import "TargetTabBarViewController.h"

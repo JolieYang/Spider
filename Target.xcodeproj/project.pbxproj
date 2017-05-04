@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1B144A055B212CFF43401465 /* libPods-Target.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F494DB1F4CD10C426CF9AD1F /* libPods-Target.a */; };
+		A034A7371EBAC1EE0012AB81 /* JYNavAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A034A7321EBAC1EE0012AB81 /* JYNavAnimation.m */; };
+		A034A7381EBAC1EE0012AB81 /* JYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A034A7341EBAC1EE0012AB81 /* JYNavigationController.m */; };
+		A034A7391EBAC1EE0012AB81 /* JYNavInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = A034A7361EBAC1EE0012AB81 /* JYNavInteractiveTransition.m */; };
 		A03CD2901EAA71F300152757 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD28F1EAA71F300152757 /* main.m */; };
 		A03CD2931EAA71F300152757 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD2921EAA71F300152757 /* AppDelegate.m */; };
 		A03CD2991EAA71F300152757 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A03CD2971EAA71F300152757 /* Main.storyboard */; };
@@ -35,8 +38,6 @@
 		A03CD34C1EAB89AC00152757 /* HcdDateTimePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD2E11EAB89AC00152757 /* HcdDateTimePickerView.m */; };
 		A03CD34D1EAB89AC00152757 /* MXSCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD2E31EAB89AC00152757 /* MXSCycleScrollView.m */; };
 		A03CD34E1EAB89AC00152757 /* UIColor+HcdCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD2E51EAB89AC00152757 /* UIColor+HcdCustom.m */; };
-		A03CD3531EAB89AC00152757 /* AnimationContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD2F41EAB89AC00152757 /* AnimationContoller.m */; };
-		A03CD3541EAB89AC00152757 /* KLTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD2F61EAB89AC00152757 /* KLTNavigationController.m */; };
 		A03CD35A1EAB89AC00152757 /* TargetAddRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD3051EAB89AC00152757 /* TargetAddRecordViewController.m */; };
 		A03CD35B1EAB89AC00152757 /* TargetAddRecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A03CD3061EAB89AC00152757 /* TargetAddRecordViewController.xib */; };
 		A03CD35C1EAB89AC00152757 /* TargetAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD3081EAB89AC00152757 /* TargetAddViewController.m */; };
@@ -77,6 +78,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A034A7311EBAC1EE0012AB81 /* JYNavAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYNavAnimation.h; sourceTree = "<group>"; };
+		A034A7321EBAC1EE0012AB81 /* JYNavAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYNavAnimation.m; sourceTree = "<group>"; };
+		A034A7331EBAC1EE0012AB81 /* JYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYNavigationController.h; sourceTree = "<group>"; };
+		A034A7341EBAC1EE0012AB81 /* JYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYNavigationController.m; sourceTree = "<group>"; };
+		A034A7351EBAC1EE0012AB81 /* JYNavInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYNavInteractiveTransition.h; sourceTree = "<group>"; };
+		A034A7361EBAC1EE0012AB81 /* JYNavInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYNavInteractiveTransition.m; sourceTree = "<group>"; };
 		A03CD28B1EAA71F300152757 /* Target.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Target.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A03CD28F1EAA71F300152757 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A03CD2911EAA71F300152757 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -128,10 +135,6 @@
 		A03CD2E31EAB89AC00152757 /* MXSCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSCycleScrollView.m; sourceTree = "<group>"; };
 		A03CD2E41EAB89AC00152757 /* UIColor+HcdCustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HcdCustom.h"; sourceTree = "<group>"; };
 		A03CD2E51EAB89AC00152757 /* UIColor+HcdCustom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HcdCustom.m"; sourceTree = "<group>"; };
-		A03CD2F31EAB89AC00152757 /* AnimationContoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationContoller.h; sourceTree = "<group>"; };
-		A03CD2F41EAB89AC00152757 /* AnimationContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationContoller.m; sourceTree = "<group>"; };
-		A03CD2F51EAB89AC00152757 /* KLTNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLTNavigationController.h; sourceTree = "<group>"; };
-		A03CD2F61EAB89AC00152757 /* KLTNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLTNavigationController.m; sourceTree = "<group>"; };
 		A03CD3041EAB89AC00152757 /* TargetAddRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetAddRecordViewController.h; sourceTree = "<group>"; };
 		A03CD3051EAB89AC00152757 /* TargetAddRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetAddRecordViewController.m; sourceTree = "<group>"; };
 		A03CD3061EAB89AC00152757 /* TargetAddRecordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TargetAddRecordViewController.xib; sourceTree = "<group>"; };
@@ -204,6 +207,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A034A7301EBAC1EE0012AB81 /* JYNavTransition */ = {
+			isa = PBXGroup;
+			children = (
+				A034A7311EBAC1EE0012AB81 /* JYNavAnimation.h */,
+				A034A7321EBAC1EE0012AB81 /* JYNavAnimation.m */,
+				A034A7331EBAC1EE0012AB81 /* JYNavigationController.h */,
+				A034A7341EBAC1EE0012AB81 /* JYNavigationController.m */,
+				A034A7351EBAC1EE0012AB81 /* JYNavInteractiveTransition.h */,
+				A034A7361EBAC1EE0012AB81 /* JYNavInteractiveTransition.m */,
+			);
+			path = JYNavTransition;
+			sourceTree = "<group>";
+		};
 		A03CD2821EAA71F300152757 = {
 			isa = PBXGroup;
 			children = (
@@ -347,8 +363,8 @@
 		A03CD2DE1EAB89AC00152757 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				A034A7301EBAC1EE0012AB81 /* JYNavTransition */,
 				A03CD2DF1EAB89AC00152757 /* HcdDateTimePicker */,
-				A03CD2F21EAB89AC00152757 /* KLTAnimateNav */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -364,17 +380,6 @@
 				A03CD2E51EAB89AC00152757 /* UIColor+HcdCustom.m */,
 			);
 			path = HcdDateTimePicker;
-			sourceTree = "<group>";
-		};
-		A03CD2F21EAB89AC00152757 /* KLTAnimateNav */ = {
-			isa = PBXGroup;
-			children = (
-				A03CD2F31EAB89AC00152757 /* AnimationContoller.h */,
-				A03CD2F41EAB89AC00152757 /* AnimationContoller.m */,
-				A03CD2F51EAB89AC00152757 /* KLTNavigationController.h */,
-				A03CD2F61EAB89AC00152757 /* KLTNavigationController.m */,
-			);
-			path = KLTAnimateNav;
 			sourceTree = "<group>";
 		};
 		A03CD3021EAB89AC00152757 /* Sections */ = {
@@ -552,7 +557,7 @@
 				TargetAttributes = {
 					A03CD28A1EAA71F300152757 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 68DEP5VP86;
+						DevelopmentTeam = 5STM2R5485;
 					};
 					A03CD2A31EAA71F300152757 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -653,7 +658,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -670,13 +675,12 @@
 				A03CD34E1EAB89AC00152757 /* UIColor+HcdCustom.m in Sources */,
 				A03CD3681EAB89AC00152757 /* TargetLogShowTableViewCell.m in Sources */,
 				A03CD33A1EAB89AC00152757 /* UITextView+JY.m in Sources */,
-				A03CD3531EAB89AC00152757 /* AnimationContoller.m in Sources */,
 				A03CD3641EAB89AC00152757 /* TargetRecord.m in Sources */,
+				A034A7371EBAC1EE0012AB81 /* JYNavAnimation.m in Sources */,
 				A03CD33B1EAB89AC00152757 /* UITextView+PlaceHolder.m in Sources */,
 				A03CD3631EAB89AC00152757 /* Target.m in Sources */,
 				A03CD35D1EAB89AC00152757 /* TargetHomeNavigationController.m in Sources */,
 				A03CD33F1EAB89AC00152757 /* BaseNavigationController.m in Sources */,
-				A03CD3541EAB89AC00152757 /* KLTNavigationController.m in Sources */,
 				A03CD3661EAB89AC00152757 /* TargetLogHeaderTableViewCell.m in Sources */,
 				A03CD35E1EAB89AC00152757 /* TargetHomeViewController.m in Sources */,
 				A03CD3421EAB89AC00152757 /* OutAlertViewController.m in Sources */,
@@ -694,12 +698,14 @@
 				A03CD33C1EAB89AC00152757 /* UIView+JY.m in Sources */,
 				A03CD3461EAB89AC00152757 /* IconTextFieldTableViewCell.m in Sources */,
 				A03CD3711EAB89AC00152757 /* JYFileManager.m in Sources */,
+				A034A7391EBAC1EE0012AB81 /* JYNavInteractiveTransition.m in Sources */,
 				A0BD7A9E1EACFF0700CB90B3 /* TextViewTableViewCell.m in Sources */,
 				A03CD3481EAB89AC00152757 /* MonoTextViewTableViewCell.m in Sources */,
 				A03CD3741EAB89AC00152757 /* TextViewHelper.m in Sources */,
 				A03CD36E1EAB89AC00152757 /* TargetShowTableViewCell.m in Sources */,
 				A03CD2901EAA71F300152757 /* main.m in Sources */,
 				A03CD3391EAB89AC00152757 /* UILabel+JY.m in Sources */,
+				A034A7381EBAC1EE0012AB81 /* JYNavigationController.m in Sources */,
 				A03CD3701EAB89AC00152757 /* DateHelper.m in Sources */,
 				A03CD3411EAB89AC00152757 /* JYProgressHUD.m in Sources */,
 				A03CD34A1EAB89AC00152757 /* TextFieldTableViewCell.m in Sources */,
@@ -837,7 +843,7 @@
 				GCC_PREFIX_HEADER = "Target/Config/Target-Prefix.pch";
 				INFOPLIST_FILE = Target/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jolieyang.Target;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jolie.Target;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -853,7 +859,7 @@
 				GCC_PREFIX_HEADER = "Target/Config/Target-Prefix.pch";
 				INFOPLIST_FILE = Target/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jolieyang.Target;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jolie.Target;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
