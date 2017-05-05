@@ -34,9 +34,21 @@
                       @"insistHours",
                       @"status",
                       @"remarks",
-                      @"targetIcon"
+                      @"targetIcon",
+                      @"targetType"
                       ];
     }
     return propertis;
+}
+
++ (NSDictionary *)defaultValues {
+    static NSDictionary *values = nil;
+    if (!values) {
+        values = @{
+                   @"targetType" : [NSNumber numberWithInteger:TargetTypeProject]
+                   };
+    }
+    
+    return values;
 }
 @end

@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-@class Target;
+#import "Target.h"
 
 @interface TargetAddViewController : UIViewController
-
+@property (nonatomic, assign) TargetType targetType;
 @property (nonatomic, copy) void (^successAddTargetBlock)(Target *newData);
 
 @end

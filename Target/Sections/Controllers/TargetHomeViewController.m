@@ -15,6 +15,7 @@
 #import "TargetManager.h"
 #import "Target.h"
 #import "TargetRecordManager.h"
+#import "ACActionSheet.h"
 
 @interface TargetHomeViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
@@ -71,11 +72,23 @@
 
 // 添加项目
 - (void)addItemAction {
-    [self jumpToTargetAddVC];
+    [self chooseTargetType];
 }
 
-- (void)jumpToTargetAddVC {
+- (void)chooseTargetType {
+    ACActionSheet *actionSheet = [[ACActionSheet alloc] initWithTitle:nil cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@[@"项目", @"日志"] actionSheetBlock:^(NSInteger buttonIndex) {
+        if (buttonIndex == 0) {
+            [self jumpToTargetAddVCWithType:TargetTypeProject];
+        } else if (buttonIndex == 1) {
+            [self jumpToTargetAddVCWithType:TargetTypeLog];
+        }
+    }];
+    [actionSheet show];
+}
+
+- (void)jumpToTargetAddVCWithType:(TargetType)targetType {
     TargetAddViewController *vc = [TargetAddViewController new];
+    vc.targetType = targetType;
     vc.successAddTargetBlock = ^(Target *newData) {
         [self.targetList addObject:newData];
     };
@@ -99,7 +112,7 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (!self.targetList.count) {
-        [self jumpToTargetAddVC];
+        [self chooseTargetType];
         return;
     }
     TargetAddRecordViewController *addRecordVC = [[TargetAddRecordViewController alloc] init];

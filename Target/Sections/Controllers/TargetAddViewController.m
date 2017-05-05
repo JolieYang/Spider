@@ -12,7 +12,6 @@
 #import "IconTextViewTableViewCell.h"
 #import "TextFieldTableViewCell.h"
 #import "TextViewTableViewCell.h"
-#import "Target.h"
 #import "TargetManager.h"
 #import "DateHelper.h"
 #import "UITextView+JY.h"
@@ -155,6 +154,7 @@
 
 - (Target *)addedTarget {
     Target *target = [[Target alloc] init];
+    target.targetType = self.targetType;
     target.targetName = [self.firstCell.inputTextField.text trim];
     target.remarks = [self.secondCell.textView.text trim];
     target.targetIcon = self.firstCell.iconImageView.image;

@@ -10,13 +10,13 @@
 // 1. UIAlertController:addAction 1) 根据Style： 0-2 从右到左排列 2) 相同style: 按添加顺序从左到右排列。
 
 
-#import "OutAlertViewController.h"
+#import "JYAlertViewController.h"
 
-@interface OutAlertViewController ()
+@interface JYAlertViewController ()
 
 @end
 
-@implementation OutAlertViewController
+@implementation JYAlertViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,25 +28,25 @@
     // Dispose of any resources that can be recreated.
 }
 + (UIAlertController *)showWithTitle:(NSString *)title actionTitle:(NSString *)actionStr {
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:nil preferredStyle:UIAlertControllerStyleAlert];
+    JYAlertViewController *alertController = (JYAlertViewController *)[UIAlertController alertControllerWithTitle:title message:nil preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:actionStr style:UIAlertActionStyleDefault handler:nil];
     [alertController addAction:okAction];
     
     return alertController;
 }
 + (UIAlertController *)lenghtExceedLimit {
-    UIAlertController *alertController = [OutAlertViewController showWithTitle:@"超出100字限制" actionTitle:@"知道了"];
+    UIAlertController *alertController = [JYAlertViewController showWithTitle:@"超出100字限制" actionTitle:@"知道了"];
     
     return alertController;
 }
 
 + (UIAlertController *)spaceOutName {
-    UIAlertController *alertController = [OutAlertViewController showWithTitle:@"OutName不可全为空格" actionTitle:@"知道了"];
+    UIAlertController *alertController = [JYAlertViewController showWithTitle:@"OutName不可全为空格" actionTitle:@"知道了"];
     
     return alertController;
 }
 + (UIAlertController *)nullOutName {
-    UIAlertController *alertController = [OutAlertViewController showWithTitle:@"请输入OutName" actionTitle:@"知道了"];
+    UIAlertController *alertController = [JYAlertViewController showWithTitle:@"请输入OutName" actionTitle:@"知道了"];
     
     return alertController;
 }

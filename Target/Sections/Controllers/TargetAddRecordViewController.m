@@ -140,17 +140,9 @@
         }
         
         return cell;
-    } else if (indexPath.section == 1) {
+    } else {
          TextViewTableViewCell *cell = [TextViewTableViewCell loadFromNib];
         [cell.textView setPlaceHolder:@"输入你想说的"];
-        
-        return cell;
-    } else {
-        static NSString *identifier = @"UITableViewCellIdentifier";
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-        if (!cell) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-        }
         
         return cell;
     }

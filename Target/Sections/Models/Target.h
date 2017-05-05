@@ -8,6 +8,11 @@
 
 #import <GYDataCenter/GYDataCenter.h>
 
+typedef NS_ENUM(NSInteger,TargetType) {
+    TargetTypeProject = 0,
+    TargetTypeLog = 1
+};
+
 @interface Target : GYModelObject
 @property (nonatomic, assign) NSInteger targetId;
 @property (nonatomic, strong) NSString *targetName;
@@ -20,4 +25,5 @@
 @property (nonatomic, assign) NSInteger status; // 项目状态 0尚未开始  1进行中 2暂停
 @property (nonatomic, strong) NSString *remarks;
 @property (nonatomic, strong) UIImage *targetIcon;
+@property (nonatomic, assign) TargetType targetType;
 @end
