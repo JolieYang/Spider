@@ -5,10 +5,6 @@
 //  Created by Jolie_Yang on 2017/3/16.
 //  Copyright © 2017年 Jolie_Yang. All rights reserved.
 //
-//  [检测是否输入文字]当直接点击提示栏中的文字时，不触发任何代理，因而需要通过键值观察检测是否输入文本。
-// UITextFieldTextDidChangeNotification点击词频上的字符，会调用两次，点击按键上的字符，调用一次。
-// [?]添加键值观察self.inputTextField addObserver:self keyPath:@"text" 不知道为什么文本明明修改了，但是没有触发observeValueForKeyPath事件
-// [done] 本控件封装的还不够好， 比如是否应该开放控件inputTextField。  --> 开放
 
 #import "IconTextFieldTableViewCell.h"
 
@@ -35,9 +31,10 @@
 
 - (void)initialization {
     self.inputTextField.delegate = self;
+    // UITextFieldTextDidChangeNotification点击词频上的字符，会调用两次，点击按键上的字符，调用一次。
+//  [检测是否输入文字]当直接点击提示栏中的文字时，不触发任何代理，因而需要通过通知检测是否输入文本。
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeInputStatus) name:UITextFieldTextDidChangeNotification object:nil];
-    // [?]  无法检测
-    [self.inputTextField addObserver:self forKeyPath:@"text" options:NSKeyValueObservingOptionOld context:@"IconTextFieldTableViewCell"];
+    [self.inputTextField addObserver:self forKeyPath:@"text" options:NSKeyValueObservingOptionNew context:@"IconTextFieldTableViewCell"];
 }
 - (void)removeFromSuperview {
     [super removeFromSuperview];
@@ -45,6 +42,7 @@
     
 }
 
+// ? 代码给text赋值可以收到通知，但手动输入则无法收到通知
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
     NSLog(@"observeValueForKeyPath");
     if ([keyPath isEqualToString:@"text"]) {
@@ -62,11 +60,6 @@
 }
 
 - (void)changeInputStatus {
-    if (self.inputTextField.text.length > 0) {
-        _inputed = YES;
-    } else {
-        _inputed = NO;
-    }
     if (self.textFieldDidChangeBlock) {
         self.textFieldDidChangeBlock(_inputTextField.text);
     }

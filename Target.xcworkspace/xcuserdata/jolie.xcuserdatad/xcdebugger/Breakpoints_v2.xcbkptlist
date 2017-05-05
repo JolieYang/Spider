@@ -9,13 +9,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Target/Sections/Controllers/TargetHomeViewController.m"
-            timestampString = "515656247.371385"
+            filePath = "Target/General/Views/TableViewCell/IconTextFieldTableViewCell.m"
+            timestampString = "515690916.158194"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "-jumpToTargetAddVCWithType:"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "-removeFromSuperview"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Target/Sections/Controllers/TargetAddViewController.m"
+            timestampString = "515692454.425078"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "244"
+            endingLineNumber = "244"
+            landmarkName = "-updateNavRightItem"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

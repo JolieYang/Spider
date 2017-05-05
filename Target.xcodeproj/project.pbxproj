@@ -69,7 +69,6 @@
 		A03CD3721EAB89AC00152757 /* JYPermissionsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD3341EAB89AC00152757 /* JYPermissionsManager.m */; };
 		A03CD3731EAB89AC00152757 /* StringHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD3361EAB89AC00152757 /* StringHelper.m */; };
 		A03CD3741EAB89AC00152757 /* TextViewHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD3381EAB89AC00152757 /* TextViewHelper.m */; };
-		A0BD7A991EACE34C00CB90B3 /* TargetTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BD7A981EACE34C00CB90B3 /* TargetTabBarViewController.m */; };
 		A0BD7A9E1EACFF0700CB90B3 /* TextViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BD7A9C1EACFF0700CB90B3 /* TextViewTableViewCell.m */; };
 		A0BD7A9F1EACFF0700CB90B3 /* TextViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0BD7A9D1EACFF0700CB90B3 /* TextViewTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -195,8 +194,6 @@
 		A03CD3361EAB89AC00152757 /* StringHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringHelper.m; sourceTree = "<group>"; };
 		A03CD3371EAB89AC00152757 /* TextViewHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewHelper.h; sourceTree = "<group>"; };
 		A03CD3381EAB89AC00152757 /* TextViewHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewHelper.m; sourceTree = "<group>"; };
-		A0BD7A971EACE34C00CB90B3 /* TargetTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetTabBarViewController.h; sourceTree = "<group>"; };
-		A0BD7A981EACE34C00CB90B3 /* TargetTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetTabBarViewController.m; sourceTree = "<group>"; };
 		A0BD7A9A1EACE48800CB90B3 /* Target-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Target-Prefix.pch"; sourceTree = "<group>"; };
 		A0BD7A9B1EACFF0700CB90B3 /* TextViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewTableViewCell.h; sourceTree = "<group>"; };
 		A0BD7A9C1EACFF0700CB90B3 /* TextViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewTableViewCell.m; sourceTree = "<group>"; };
@@ -433,8 +430,6 @@
 		A03CD3021EAB89AC00152757 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
-				A0BD7A971EACE34C00CB90B3 /* TargetTabBarViewController.h */,
-				A0BD7A981EACE34C00CB90B3 /* TargetTabBarViewController.m */,
 				A03CD3031EAB89AC00152757 /* Controllers */,
 				A03CD3161EAB89AC00152757 /* Models */,
 				A03CD31D1EAB89AC00152757 /* Views */,
@@ -587,7 +582,7 @@
 				TargetAttributes = {
 					A03CD28A1EAA71F300152757 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 5STM2R5485;
+						DevelopmentTeam = 68DEP5VP86;
 					};
 					A03CD2A31EAA71F300152757 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -720,7 +715,6 @@
 				A03CD3721EAB89AC00152757 /* JYPermissionsManager.m in Sources */,
 				A03CD3401EAB89AC00152757 /* BaseTableView.m in Sources */,
 				A03CD34D1EAB89AC00152757 /* MXSCycleScrollView.m in Sources */,
-				A0BD7A991EACE34C00CB90B3 /* TargetTabBarViewController.m in Sources */,
 				A03CD36C1EAB89AC00152757 /* TargetRecordInsistHoursTableViewCell.m in Sources */,
 				A034A76B1EBC4AE60012AB81 /* TargetManager.m in Sources */,
 				A03CD3441EAB89AC00152757 /* CenterTitleTableViewCell.m in Sources */,
@@ -879,7 +873,7 @@
 				GCC_PREFIX_HEADER = "Target/Config/Target-Prefix.pch";
 				INFOPLIST_FILE = Target/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jolie.Target;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jolieyangyeah.Target;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -895,7 +889,7 @@
 				GCC_PREFIX_HEADER = "Target/Config/Target-Prefix.pch";
 				INFOPLIST_FILE = Target/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jolie.Target;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jolieyangyeah.Target;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

@@ -82,4 +82,5 @@
 #define Gray_Nav_Check_Icon_Name @"gray_ok"
 
 #define Default_Image [UIImage imageNamed: @"gray_target_icon"]
+#define Default_Target_Icon [UIImage imageNamed: @"gray_target_icon"]
 #endif /* AppMacro_h */

@@ -17,4 +17,5 @@
 
 + (instancetype)initWithTarget:(Target *)target;
 @property (nonatomic, copy) void (^popBlock)();
+@property (nonatomic, copy) void (^editBlock)();
 @end

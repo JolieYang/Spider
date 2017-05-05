@@ -88,8 +88,8 @@
 
 - (void)jumpToTargetAddVCWithType:(TargetType)targetType {
     TargetAddViewController *vc = [TargetAddViewController new];
-    vc.targetType = targetType;
-    vc.successAddTargetBlock = ^(Target *newData) {
+    vc.addTargetType = targetType;
+    vc.successAddOrEditTargetBlock = ^(Target *newData) {
         [self.targetList addObject:newData];
     };
     vc.hidesBottomBarWhenPushed = YES;

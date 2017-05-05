@@ -38,6 +38,10 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     self.navigationController.navigationBar.hidden = NO;
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    self.navigationController.navigationBar.barTintColor = System_Nav_Black;
+    [self setNavigationBarTitleColor:System_Nav_White];
+    
     self.title = self.target.targetName;
     [self customBackItemWithImageName:White_Back_Icon_Name action:^{
         [self.navigationController popViewControllerAnimated:YES];

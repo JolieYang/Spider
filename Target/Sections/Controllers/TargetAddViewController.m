@@ -37,10 +37,17 @@
     // Do any additional setup after loading the view.
     [self setupViews];
 }
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.title = @"创建Target";
+    self.navigationController.navigationBar.hidden = NO;
     self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
+    
+    if (self.target) {
+        self.title = @"编辑Target";
+    } else {
+        self.title = @"创建Target";
+    }
     [self customBackItemWithImageName:Gray_Nav_Back_Icon_Name action:^{
         [self.navigationController popViewControllerAnimated:YES];
     }];
@@ -78,13 +85,17 @@
 }
 
 - (void)doneItemAction {
-    // 添加项目
+    if (self.target) {
+        // 修改项目信息
+    } else {
+        // 添加项目
+    }
     if ([self.firstCell.inputTextField.text trim].length == 0) {
         [JYProgressHUD showTextHUDWithDetailString:@"请填写Target名称" AddedTo:self.view];
         return;
     }
-    if (self.successAddTargetBlock) {
-        self.successAddTargetBlock([self addedTarget]);
+    if (self.successAddOrEditTargetBlock) {
+        self.successAddOrEditTargetBlock([self addOrModifyTarget]);
     }
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -113,17 +124,18 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     __weak typeof(self) weakSelf = self;
     
-    TextFieldTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([TextFieldTableViewCell class])];
-    if (!cell) {
-        cell = [TextFieldTableViewCell loadFromNib];
-    }
-    
     if (indexPath.section == 0) {
         self.firstCell = [IconTextFieldTableViewCell loadFromNib];
-        self.firstCell.inputTextField.placeholder = @"Target名称，如看电影，跑步";
-        self.firstCell.iconImageView.image = Default_Image;
         self.firstCell.inputTextField.returnKeyType = UIReturnKeyDone;
         self.firstCell.inputTextField.font = [UIFont systemFontOfSize:16.0];
+        if (self.target) {
+            self.firstCell.inputTextField.text = self.target.targetName;
+            [self.firstCell.iconImageView round];
+            self.firstCell.iconImageView.image = self.target.targetIcon == nil ? Default_Target_Icon : self.target.targetIcon;
+        } else {
+            self.firstCell.inputTextField.placeholder = @"Target名称，如看电影，跑步";
+            self.firstCell.iconImageView.image = Default_Target_Icon;
+        }
         [self.firstCell.iconImageView tapGestureWithBlock:^{
             [self chooseImageFromSystem];
         }];
@@ -132,7 +144,7 @@
         };
         self.firstCell.textFieldDidChangeBlock = ^(NSString *text) {
             if (text.length > 0) {
-                [weakSelf hideRightItem:NO];
+                [weakSelf updateNavRightItem];
             } else {
                 [weakSelf hideRightItem:YES];
             }
@@ -140,28 +152,41 @@
         return self.firstCell;
 
     } else if(indexPath.section == 1) {
-        TextViewTableViewCell *cell = [TextViewTableViewCell loadFromNib];
-        self.secondCell = cell;
-//        cell.textView.font = [UIFont fontWithName:@"PingFangSC-Thin" size:14.0];
-        cell.textView.font = [UIFont systemFontOfSize:16.0];
-        [cell.textView setPlaceHolder: @"描述Target，也可以是一句激励自己的话"];
+        self.secondCell = [TextViewTableViewCell loadFromNib];
+        if (self.target.remarks.length > 0) {
+            self.secondCell.textView.text = self.target.remarks;
+        } else {
+            //        cell.textView.font = [UIFont fontWithName:@"PingFangSC-Thin" size:14.0];
+            self.secondCell.textView.font = [UIFont systemFontOfSize:16.0];
+            [self.secondCell.textView setPlaceHolder: @"描述Target，也可以是一句激励自己的话"];
+        }
         
-        return cell;
+        return self.secondCell;
     } else {
+        TextFieldTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([TextFieldTableViewCell class])];
+        if (!cell) {
+            cell = [TextFieldTableViewCell loadFromNib];
+        }
+        
         return cell;
     }
 }
 
-- (Target *)addedTarget {
-    Target *target = [[Target alloc] init];
-    target.targetType = self.targetType;
-    target.targetName = [self.firstCell.inputTextField.text trim];
-    target.remarks = [self.secondCell.textView.text trim];
-    target.targetIcon = self.firstCell.iconImageView.image;
-    target.createUnix = [DateHelper getCurrentTimeInterval];
-    target.updateUnix = target.createUnix;
-    [TargetManager addTarget:target];
-    return target;
+- (Target *)addOrModifyTarget {
+    NSTimeInterval currentTimeInterval = [DateHelper getCurrentTimeInterval];
+    if (!self.target) {
+        self.target = [[Target alloc] init];
+        self.target.createUnix = currentTimeInterval;
+        self.target.targetType = self.addTargetType;
+    }
+    self.target.targetName = [self.firstCell.inputTextField.text trim];
+    self.target.remarks = [self.secondCell.textView.text trim];
+    self.target.targetIcon = self.firstCell.iconImageView.image;
+    self.target.updateUnix = currentTimeInterval;
+    
+    [TargetManager addOrModifyTarget:self.target];
+    
+    return self.target;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -202,13 +227,11 @@
         //如果是图片
         [self.firstCell.iconImageView round];
         self.firstCell.iconImageView.image = info[UIImagePickerControllerEditedImage];
-        //压缩图片
-        //        NSData *fileData = UIImageJPEGRepresentation(self.inputImageView.image, 1.0);
-        //保存图片至相册
-        //        UIImageWriteToSavedPhotosAlbum(self.inputImageView.image, self, @selector(image:didFinishSavingWithError:contextInfo:), NULL);
-        //上传图片
-        //        [self uploadImageWithData:fileData];
-        
+        if (self.firstCell.inputTextField.text.length > 0) {
+            [self updateNavRightItem];
+        } else {
+            [self hideRightItem:YES];
+        }
     }
     
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -216,5 +239,21 @@
 // cancel
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+#pragma mark -- UI
+- (void)updateNavRightItem {
+    if (![self sameImage]
+        || ![[self.firstCell.inputTextField.text trim] isEqualToString:self.target.targetName]) {
+        [self hideRightItem:NO];
+    } else {
+        [self hideRightItem:YES];
+    }
+}
+
+- (BOOL)sameImage {
+    NSData *targetImageIconData = UIImagePNGRepresentation(self.target.targetIcon==nil? Default_Target_Icon : self.target.targetIcon);
+    NSData *currentImageIconData = UIImagePNGRepresentation(self.firstCell.iconImageView.image);
+    
+    return [targetImageIconData isEqual:currentImageIconData];
 }
 @end

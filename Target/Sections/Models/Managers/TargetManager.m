@@ -12,7 +12,7 @@
 
 @implementation TargetManager
 #pragma makr - C
-+ (void)addTarget:(Target *)target {
++ (void)addOrModifyTarget:(Target *)target {
     [target save];
 }
 

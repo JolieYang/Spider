@@ -15,7 +15,7 @@
     TargetLogHeaderTableViewCell *cell = [self loadFromNib];
     cell.targetNameLable.text = target.targetName;
     cell.insistHoursLabel.text = [NSString stringWithFormat:@"- 坚持了%.1f小时 -", target.insistHours];
-    cell.remarksLabel.text = target.remarks == nil? @"暂无描述" : target.remarks;
+    cell.remarksLabel.text = target.remarks.length > 0 ? target.remarks : @"暂无描述";
     
     return cell;
 }
@@ -39,7 +39,10 @@
         self.popBlock();
     }
 }
-- (IBAction)detailAction:(id)sender {
+- (IBAction)editAction:(id)sender {
+    if (self.editBlock) {
+        self.editBlock();
+    }
 }
 
 @end

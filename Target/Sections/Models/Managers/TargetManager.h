@@ -10,7 +10,7 @@
 @class Target;
 
 @interface TargetManager : NSObject
-+ (void)addTarget:(Target *)target;
++ (void)addOrModifyTarget:(Target *)target;
 + (Target *)addTargetWithTargetName:(NSString *)targetName createUnix:(NSTimeInterval)createUnix;
 
 + (NSArray *)getTargetList;

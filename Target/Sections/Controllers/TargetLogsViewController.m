@@ -7,6 +7,7 @@
 //
 
 #import "TargetLogsViewController.h"
+#import "TargetAddViewController.h"
 #import "TargetLogHeaderTableViewCell.h"
 #import "TargetLogShowTableViewCell.h"
 #import "CenterTitleTableViewCell.h"
@@ -31,6 +32,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     self.navigationController.navigationBar.hidden = YES;
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
 }
 
 - (void)setupViews {
@@ -89,6 +91,15 @@
         TargetLogHeaderTableViewCell *cell = [TargetLogHeaderTableViewCell initWithTarget:self.target];
         cell.popBlock = ^(){
             [self.navigationController popViewControllerAnimated:YES];
+        };
+        cell.editBlock = ^() {
+            TargetAddViewController *vc = [[TargetAddViewController alloc] init];
+            vc.target = self.target;
+            vc.successAddOrEditTargetBlock = ^(Target *target) {
+                self.target = target;
+                [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
+            };
+            [self.navigationController pushViewController:vc animated:YES];
         };
         
         return cell;
