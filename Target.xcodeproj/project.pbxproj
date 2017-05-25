@@ -17,7 +17,6 @@
 		A034A74C1EBB19C00012AB81 /* NSString+JY.m in Sources */ = {isa = PBXBuildFile; fileRef = A034A74B1EBB19C00012AB81 /* NSString+JY.m */; };
 		A034A74F1EBB1D950012AB81 /* UIImageView+JY.m in Sources */ = {isa = PBXBuildFile; fileRef = A034A74E1EBB1D950012AB81 /* UIImageView+JY.m */; };
 		A034A7521EBC19990012AB81 /* UIAlertController+JY.m in Sources */ = {isa = PBXBuildFile; fileRef = A034A7511EBC19990012AB81 /* UIAlertController+JY.m */; };
-		A034A7561EBC23620012AB81 /* JYAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = A034A7551EBC23620012AB81 /* JYAlertController.m */; };
 		A034A7641EBC48880012AB81 /* ACActionSheet.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A034A7611EBC48880012AB81 /* ACActionSheet.bundle */; };
 		A034A7651EBC48880012AB81 /* ACActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = A034A7631EBC48880012AB81 /* ACActionSheet.m */; };
 		A034A76B1EBC4AE60012AB81 /* TargetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A034A7681EBC4AE60012AB81 /* TargetManager.m */; };
@@ -34,7 +33,7 @@
 		A03CD33E1EAB89AC00152757 /* UIViewController+JY.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD2C41EAB89AC00152757 /* UIViewController+JY.m */; };
 		A03CD3401EAB89AC00152757 /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD2CA1EAB89AC00152757 /* BaseTableView.m */; };
 		A03CD3411EAB89AC00152757 /* JYProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD2CC1EAB89AC00152757 /* JYProgressHUD.m */; };
-		A03CD3421EAB89AC00152757 /* JYAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD2CE1EAB89AC00152757 /* JYAlertViewController.m */; };
+		A03CD3421EAB89AC00152757 /* JYAlertControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD2CE1EAB89AC00152757 /* JYAlertControllerManager.m */; };
 		A03CD3431EAB89AC00152757 /* JYImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD2D01EAB89AC00152757 /* JYImageView.m */; };
 		A03CD3441EAB89AC00152757 /* CenterTitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD2D31EAB89AC00152757 /* CenterTitleTableViewCell.m */; };
 		A03CD3451EAB89AC00152757 /* CenterTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A03CD2D41EAB89AC00152757 /* CenterTitleTableViewCell.xib */; };
@@ -49,7 +48,7 @@
 		A03CD34E1EAB89AC00152757 /* UIColor+HcdCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD2E51EAB89AC00152757 /* UIColor+HcdCustom.m */; };
 		A03CD35A1EAB89AC00152757 /* TargetAddRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD3051EAB89AC00152757 /* TargetAddRecordViewController.m */; };
 		A03CD35B1EAB89AC00152757 /* TargetAddRecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A03CD3061EAB89AC00152757 /* TargetAddRecordViewController.xib */; };
-		A03CD35C1EAB89AC00152757 /* TargetAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD3081EAB89AC00152757 /* TargetAddViewController.m */; };
+		A03CD35C1EAB89AC00152757 /* TargetAddOrEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD3081EAB89AC00152757 /* TargetAddOrEditViewController.m */; };
 		A03CD35D1EAB89AC00152757 /* TargetHomeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD30A1EAB89AC00152757 /* TargetHomeNavigationController.m */; };
 		A03CD35E1EAB89AC00152757 /* TargetHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD30C1EAB89AC00152757 /* TargetHomeViewController.m */; };
 		A03CD35F1EAB89AC00152757 /* TargetLogsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A03CD30E1EAB89AC00152757 /* TargetLogsViewController.m */; };
@@ -100,8 +99,6 @@
 		A034A74E1EBB1D950012AB81 /* UIImageView+JY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+JY.m"; sourceTree = "<group>"; };
 		A034A7501EBC19990012AB81 /* UIAlertController+JY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+JY.h"; sourceTree = "<group>"; };
 		A034A7511EBC19990012AB81 /* UIAlertController+JY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+JY.m"; sourceTree = "<group>"; };
-		A034A7541EBC23620012AB81 /* JYAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYAlertController.h; sourceTree = "<group>"; };
-		A034A7551EBC23620012AB81 /* JYAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYAlertController.m; sourceTree = "<group>"; };
 		A034A7611EBC48880012AB81 /* ACActionSheet.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ACActionSheet.bundle; sourceTree = "<group>"; };
 		A034A7621EBC48880012AB81 /* ACActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACActionSheet.h; sourceTree = "<group>"; };
 		A034A7631EBC48880012AB81 /* ACActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACActionSheet.m; sourceTree = "<group>"; };
@@ -134,8 +131,8 @@
 		A03CD2CA1EAB89AC00152757 /* BaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableView.m; sourceTree = "<group>"; };
 		A03CD2CB1EAB89AC00152757 /* JYProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYProgressHUD.h; sourceTree = "<group>"; };
 		A03CD2CC1EAB89AC00152757 /* JYProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYProgressHUD.m; sourceTree = "<group>"; };
-		A03CD2CD1EAB89AC00152757 /* JYAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYAlertViewController.h; sourceTree = "<group>"; };
-		A03CD2CE1EAB89AC00152757 /* JYAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYAlertViewController.m; sourceTree = "<group>"; };
+		A03CD2CD1EAB89AC00152757 /* JYAlertControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYAlertControllerManager.h; sourceTree = "<group>"; };
+		A03CD2CE1EAB89AC00152757 /* JYAlertControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYAlertControllerManager.m; sourceTree = "<group>"; };
 		A03CD2CF1EAB89AC00152757 /* JYImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYImageView.h; sourceTree = "<group>"; };
 		A03CD2D01EAB89AC00152757 /* JYImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYImageView.m; sourceTree = "<group>"; };
 		A03CD2D21EAB89AC00152757 /* CenterTitleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterTitleTableViewCell.h; sourceTree = "<group>"; };
@@ -159,8 +156,8 @@
 		A03CD3041EAB89AC00152757 /* TargetAddRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetAddRecordViewController.h; sourceTree = "<group>"; };
 		A03CD3051EAB89AC00152757 /* TargetAddRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetAddRecordViewController.m; sourceTree = "<group>"; };
 		A03CD3061EAB89AC00152757 /* TargetAddRecordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TargetAddRecordViewController.xib; sourceTree = "<group>"; };
-		A03CD3071EAB89AC00152757 /* TargetAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetAddViewController.h; sourceTree = "<group>"; };
-		A03CD3081EAB89AC00152757 /* TargetAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetAddViewController.m; sourceTree = "<group>"; };
+		A03CD3071EAB89AC00152757 /* TargetAddOrEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetAddOrEditViewController.h; sourceTree = "<group>"; };
+		A03CD3081EAB89AC00152757 /* TargetAddOrEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetAddOrEditViewController.m; sourceTree = "<group>"; };
 		A03CD3091EAB89AC00152757 /* TargetHomeNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetHomeNavigationController.h; sourceTree = "<group>"; };
 		A03CD30A1EAB89AC00152757 /* TargetHomeNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetHomeNavigationController.m; sourceTree = "<group>"; };
 		A03CD30B1EAB89AC00152757 /* TargetHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetHomeViewController.h; sourceTree = "<group>"; };
@@ -234,15 +231,6 @@
 				A034A7361EBAC1EE0012AB81 /* JYNavInteractiveTransition.m */,
 			);
 			path = JYNavTransition;
-			sourceTree = "<group>";
-		};
-		A034A7531EBC23420012AB81 /* JYAlertController */ = {
-			isa = PBXGroup;
-			children = (
-				A034A7541EBC23620012AB81 /* JYAlertController.h */,
-				A034A7551EBC23620012AB81 /* JYAlertController.m */,
-			);
-			path = JYAlertController;
 			sourceTree = "<group>";
 		};
 		A034A7601EBC48880012AB81 /* ACActionSheet */ = {
@@ -370,8 +358,8 @@
 				A03CD2CA1EAB89AC00152757 /* BaseTableView.m */,
 				A03CD2CB1EAB89AC00152757 /* JYProgressHUD.h */,
 				A03CD2CC1EAB89AC00152757 /* JYProgressHUD.m */,
-				A03CD2CD1EAB89AC00152757 /* JYAlertViewController.h */,
-				A03CD2CE1EAB89AC00152757 /* JYAlertViewController.m */,
+				A03CD2CD1EAB89AC00152757 /* JYAlertControllerManager.h */,
+				A03CD2CE1EAB89AC00152757 /* JYAlertControllerManager.m */,
 				A03CD2CF1EAB89AC00152757 /* JYImageView.h */,
 				A03CD2D01EAB89AC00152757 /* JYImageView.m */,
 			);
@@ -407,7 +395,6 @@
 			isa = PBXGroup;
 			children = (
 				A034A7601EBC48880012AB81 /* ACActionSheet */,
-				A034A7531EBC23420012AB81 /* JYAlertController */,
 				A034A7301EBAC1EE0012AB81 /* JYNavTransition */,
 				A03CD2DF1EAB89AC00152757 /* HcdDateTimePicker */,
 			);
@@ -447,8 +434,8 @@
 				A03CD3041EAB89AC00152757 /* TargetAddRecordViewController.h */,
 				A03CD3051EAB89AC00152757 /* TargetAddRecordViewController.m */,
 				A03CD3061EAB89AC00152757 /* TargetAddRecordViewController.xib */,
-				A03CD3071EAB89AC00152757 /* TargetAddViewController.h */,
-				A03CD3081EAB89AC00152757 /* TargetAddViewController.m */,
+				A03CD3071EAB89AC00152757 /* TargetAddOrEditViewController.h */,
+				A03CD3081EAB89AC00152757 /* TargetAddOrEditViewController.m */,
 				A03CD30D1EAB89AC00152757 /* TargetLogsViewController.h */,
 				A03CD30E1EAB89AC00152757 /* TargetLogsViewController.m */,
 				A03CD30F1EAB89AC00152757 /* TargetLogsViewController.xib */,
@@ -582,7 +569,7 @@
 				TargetAttributes = {
 					A03CD28A1EAA71F300152757 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 68DEP5VP86;
+						DevelopmentTeam = 5STM2R5485;
 					};
 					A03CD2A31EAA71F300152757 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -696,7 +683,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A03CD3431EAB89AC00152757 /* JYImageView.m in Sources */,
-				A03CD35C1EAB89AC00152757 /* TargetAddViewController.m in Sources */,
+				A03CD35C1EAB89AC00152757 /* TargetAddOrEditViewController.m in Sources */,
 				A03CD35F1EAB89AC00152757 /* TargetLogsViewController.m in Sources */,
 				A03CD34E1EAB89AC00152757 /* UIColor+HcdCustom.m in Sources */,
 				A03CD3681EAB89AC00152757 /* TargetLogShowTableViewCell.m in Sources */,
@@ -708,7 +695,7 @@
 				A03CD35D1EAB89AC00152757 /* TargetHomeNavigationController.m in Sources */,
 				A03CD3661EAB89AC00152757 /* TargetLogHeaderTableViewCell.m in Sources */,
 				A03CD35E1EAB89AC00152757 /* TargetHomeViewController.m in Sources */,
-				A03CD3421EAB89AC00152757 /* JYAlertViewController.m in Sources */,
+				A03CD3421EAB89AC00152757 /* JYAlertControllerManager.m in Sources */,
 				A03CD3731EAB89AC00152757 /* StringHelper.m in Sources */,
 				A034A7651EBC48880012AB81 /* ACActionSheet.m in Sources */,
 				A03CD2931EAA71F300152757 /* AppDelegate.m in Sources */,
@@ -732,7 +719,6 @@
 				A03CD3391EAB89AC00152757 /* UILabel+JY.m in Sources */,
 				A034A7381EBAC1EE0012AB81 /* JYNavigationController.m in Sources */,
 				A03CD3701EAB89AC00152757 /* DateHelper.m in Sources */,
-				A034A7561EBC23620012AB81 /* JYAlertController.m in Sources */,
 				A03CD3411EAB89AC00152757 /* JYProgressHUD.m in Sources */,
 				A034A7451EBB00C40012AB81 /* IconTextViewTableViewCell.m in Sources */,
 				A034A76C1EBC4AE60012AB81 /* TargetRecordManager.m in Sources */,
@@ -873,7 +859,7 @@
 				GCC_PREFIX_HEADER = "Target/Config/Target-Prefix.pch";
 				INFOPLIST_FILE = Target/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jolieyangyeah.Target;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jolie.Target;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -889,7 +875,7 @@
 				GCC_PREFIX_HEADER = "Target/Config/Target-Prefix.pch";
 				INFOPLIST_FILE = Target/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jolieyangyeah.Target;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jolie.Target;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

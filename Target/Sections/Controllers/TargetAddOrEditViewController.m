@@ -7,7 +7,7 @@
 //
 // [todo] 进入该页面时自动弹出键盘
 
-#import "TargetAddViewController.h"
+#import "TargetAddOrEditViewController.h"
 #import "IconTextFieldTableViewCell.h"
 #import "IconTextViewTableViewCell.h"
 #import "TextFieldTableViewCell.h"
@@ -21,7 +21,7 @@
 #import <Photos/Photos.h>
 #import <MobileCoreServices/MobileCoreServices.h>
 
-@interface TargetAddViewController ()<UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface TargetAddOrEditViewController ()<UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic, strong) UITableView *configTableView;
 @property (nonatomic, strong) IconTextFieldTableViewCell *firstCell;
 @property (nonatomic, strong) TextViewTableViewCell *secondCell;
@@ -30,7 +30,7 @@
 @property (nonatomic, strong) UIImagePickerController *imagePickerController;
 @end
 
-@implementation TargetAddViewController
+@implementation TargetAddOrEditViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

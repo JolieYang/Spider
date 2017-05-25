@@ -7,7 +7,7 @@
 //
 
 #import "TargetLogsViewController.h"
-#import "TargetAddViewController.h"
+#import "TargetAddOrEditViewController.h"
 #import "TargetLogHeaderTableViewCell.h"
 #import "TargetLogShowTableViewCell.h"
 #import "CenterTitleTableViewCell.h"
@@ -93,7 +93,7 @@
             [self.navigationController popViewControllerAnimated:YES];
         };
         cell.editBlock = ^() {
-            TargetAddViewController *vc = [[TargetAddViewController alloc] init];
+            TargetAddOrEditViewController *vc = [[TargetAddOrEditViewController alloc] init];
             vc.target = self.target;
             vc.successAddOrEditTargetBlock = ^(Target *target) {
                 self.target = target;

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Target.h"
 
-@interface TargetAddViewController : UIViewController
+@interface TargetAddOrEditViewController : UIViewController
 @property (nonatomic, assign) TargetType addTargetType;
 @property (nonatomic, copy) void (^successAddOrEditTargetBlock)(Target *newData);
 @property (nonatomic, strong) Target *target;

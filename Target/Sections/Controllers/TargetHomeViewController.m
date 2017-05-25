@@ -8,10 +8,11 @@
 
 #import "TargetHomeViewController.h"
 #import "TargetAddRecordViewController.h"
+#import "TargetAddOrEditViewController.h"
 #import "TargetLogsViewController.h"
 #import "TargetShowTableViewCell.h"
 #import "CenterTitleTableViewCell.h"
-#import "TargetAddViewController.h"
+#import "JYAlertControllerManager.h"
 #import "TargetManager.h"
 #import "Target.h"
 #import "TargetRecordManager.h"
@@ -87,7 +88,7 @@
 }
 
 - (void)jumpToTargetAddVCWithType:(TargetType)targetType {
-    TargetAddViewController *vc = [TargetAddViewController new];
+    TargetAddOrEditViewController *vc = [TargetAddOrEditViewController new];
     vc.addTargetType = targetType;
     vc.successAddOrEditTargetBlock = ^(Target *newData) {
         [self.targetList addObject:newData];
@@ -124,7 +125,36 @@
     };
     [self.navigationController pushViewController:addRecordVC animated:YES];
 }
-
+// 设置编辑操作
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewCellEditingStyleDelete;
+}
+// 自定义右滑按钮
+- (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+        [tableView setEditing:NO animated:YES];
+        UIAlertController *alertController = [JYAlertControllerManager alertControllerWithTitle:@"提示" message:@"确定要删除" okTitle:@"确定" okHandler:^(UIAlertAction * _Nonnull action) {
+            // 删除这个项目
+            [TargetManager deleteTarget:self.targetList[indexPath.section]];
+        }];
+        [self presentViewController:alertController animated:YES completion:nil];
+    }];
+    deleteAction.backgroundColor = [UIColor redColor];
+    
+    UITableViewRowAction *detailAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"详情" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+        [tableView setEditing:NO animated:YES];
+        TargetAddOrEditViewController *vc = [[TargetAddOrEditViewController alloc] init];
+        vc.target = self.targetList[indexPath.section];
+        vc.successAddOrEditTargetBlock = ^(Target *target) {
+            self.targetList[indexPath.section] = target;
+            [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationFade];
+        };
+        [self.navigationController pushViewController:vc animated:YES];
+    }];
+    detailAction.backgroundColor = [UIColor grayColor];
+    
+    return @[deleteAction];
+}
 #pragma mark UITableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (self.targetList.count) {
@@ -140,7 +170,6 @@
         return cell;
     }
 }
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 1;
 }
@@ -150,5 +179,9 @@
     } else {
         return 1;
     }
+}
+// 设置可以编辑
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
 }
 @end

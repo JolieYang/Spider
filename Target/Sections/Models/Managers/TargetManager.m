@@ -48,6 +48,16 @@
 #pragma mark -- U
 
 #pragma mark -- D
++ (void)deleteTarget:(Target *)target {
+    [target deleteObject];
+}
+
++ (void)deleteTargetWithTargetId:(NSInteger)targetId {
+    NSString *whereSQl = @"Where targetId = ?";
+    NSArray *arguments = @[[NSNumber numberWithInteger:targetId]];
+    
+    [Target deleteObjectsWhere:whereSQl arguments:arguments];
+}
 + (void)deleteAllTargets {
     NSString *whereSql = @"WHERE targetId > ?";
     NSArray *arguments = @[[NSNumber numberWithInt:0]];
