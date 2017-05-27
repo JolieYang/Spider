@@ -24,7 +24,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Target.xcscheme</key>
+		<key>Pods-Spider.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-SpiderTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -33,6 +38,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>586F2DFA9BDCC6675C2546793A69E5CC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>79567F7BA985EBA898E74CD1C237611E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,12 +57,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9CF1B3DC251277E2907ECB7FCDDD7CB7</key>
+		<key>E6F035B58B392AD1286D144909964327</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E6F035B58B392AD1286D144909964327</key>
+		<key>EB5FFC92DF4B1ED38A339EC978978117</key>
 		<dict>
 			<key>primary</key>
 			<true/>
