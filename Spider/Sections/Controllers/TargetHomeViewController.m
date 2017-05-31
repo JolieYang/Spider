@@ -27,7 +27,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-    self.title = @"Target";
+    self.title = @"Spider";
     self.navigationController.navigationBar.barTintColor = System_Nav_Black;
     [self setNavigationBarTitleColor:System_Nav_White];
     

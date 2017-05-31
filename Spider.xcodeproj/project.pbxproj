@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		526D184F9487842F688C1CD8 /* libPods-Spider.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295E3CF688AF32C45F1439F6 /* libPods-Spider.a */; };
 		A034A7491EBB0CB30012AB81 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A034A7471EBB0BF30012AB81 /* Photos.framework */; };
+		A0B9500A1EDE9F6B0022373A /* JYProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B950091EDE9F6B0022373A /* JYProgressHUD.m */; };
 		A0C774AA1ED9292400A4896E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C774271ED9292400A4896E /* AppDelegate.m */; };
 		A0C774AB1ED9292400A4896E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0C774281ED9292400A4896E /* Assets.xcassets */; };
 		A0C774AC1ED9292400A4896E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0C7742A1ED9292400A4896E /* LaunchScreen.storyboard */; };
@@ -20,10 +21,8 @@
 		A0C774B21ED9292400A4896E /* UITextView+JY.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C7743D1ED9292400A4896E /* UITextView+JY.m */; };
 		A0C774B31ED9292400A4896E /* UIView+JY.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C7743F1ED9292400A4896E /* UIView+JY.m */; };
 		A0C774B41ED9292400A4896E /* UIViewController+JY.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C774411ED9292400A4896E /* UIViewController+JY.m */; };
-		A0C774B51ED9292400A4896E /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C774441ED9292400A4896E /* BaseTableView.m */; };
 		A0C774B61ED9292400A4896E /* JYAlertControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C774461ED9292400A4896E /* JYAlertControllerManager.m */; };
 		A0C774B71ED9292400A4896E /* JYImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C774481ED9292400A4896E /* JYImageView.m */; };
-		A0C774B81ED9292400A4896E /* JYProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C7744A1ED9292400A4896E /* JYProgressHUD.m */; };
 		A0C774B91ED9292400A4896E /* CenterTitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C7744D1ED9292400A4896E /* CenterTitleTableViewCell.m */; };
 		A0C774BA1ED9292400A4896E /* CenterTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0C7744E1ED9292400A4896E /* CenterTitleTableViewCell.xib */; };
 		A0C774BB1ED9292400A4896E /* IconTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C774501ED9292400A4896E /* IconTextFieldTableViewCell.m */; };
@@ -89,6 +88,8 @@
 		A034A7471EBB0BF30012AB81 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		A03CD28B1EAA71F300152757 /* Spider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A03CD2A41EAA71F300152757 /* Spider.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Spider.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0B950081EDE9F6B0022373A /* JYProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYProgressHUD.h; sourceTree = "<group>"; };
+		A0B950091EDE9F6B0022373A /* JYProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYProgressHUD.m; sourceTree = "<group>"; };
 		A0C774261ED9292400A4896E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Spider/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		A0C774271ED9292400A4896E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Spider/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		A0C774281ED9292400A4896E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Spider/Assets.xcassets; sourceTree = SOURCE_ROOT; };
@@ -111,14 +112,10 @@
 		A0C7743F1ED9292400A4896E /* UIView+JY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JY.m"; sourceTree = "<group>"; };
 		A0C774401ED9292400A4896E /* UIViewController+JY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JY.h"; sourceTree = "<group>"; };
 		A0C774411ED9292400A4896E /* UIViewController+JY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JY.m"; sourceTree = "<group>"; };
-		A0C774431ED9292400A4896E /* BaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableView.h; sourceTree = "<group>"; };
-		A0C774441ED9292400A4896E /* BaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableView.m; sourceTree = "<group>"; };
 		A0C774451ED9292400A4896E /* JYAlertControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYAlertControllerManager.h; sourceTree = "<group>"; };
 		A0C774461ED9292400A4896E /* JYAlertControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYAlertControllerManager.m; sourceTree = "<group>"; };
 		A0C774471ED9292400A4896E /* JYImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYImageView.h; sourceTree = "<group>"; };
 		A0C774481ED9292400A4896E /* JYImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYImageView.m; sourceTree = "<group>"; };
-		A0C774491ED9292400A4896E /* JYProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYProgressHUD.h; sourceTree = "<group>"; };
-		A0C7744A1ED9292400A4896E /* JYProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYProgressHUD.m; sourceTree = "<group>"; };
 		A0C7744C1ED9292400A4896E /* CenterTitleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterTitleTableViewCell.h; sourceTree = "<group>"; };
 		A0C7744D1ED9292400A4896E /* CenterTitleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenterTitleTableViewCell.m; sourceTree = "<group>"; };
 		A0C7744E1ED9292400A4896E /* CenterTitleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CenterTitleTableViewCell.xib; sourceTree = "<group>"; };
@@ -237,6 +234,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A022B4211ED94C610038E066 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A0C774761ED9292400A4896E /* main.m */,
+				A0C7745E1ED9292400A4896E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		A03CD2821EAA71F300152757 = {
 			isa = PBXGroup;
 			children = (
@@ -261,29 +267,19 @@
 			children = (
 				A0C774261ED9292400A4896E /* AppDelegate.h */,
 				A0C774271ED9292400A4896E /* AppDelegate.m */,
-				A0C774281ED9292400A4896E /* Assets.xcassets */,
-				A0C774291ED9292400A4896E /* Base.lproj */,
 				A0C7742E1ED9292400A4896E /* Config */,
 				A0C774321ED9292400A4896E /* General */,
-				A0C7745E1ED9292400A4896E /* Info.plist */,
 				A0C7745F1ED9292400A4896E /* Library */,
-				A0C774761ED9292400A4896E /* main.m */,
 				A0C774771ED9292400A4896E /* Sections */,
 				A0C7749F1ED9292400A4896E /* Utils */,
+				A022B4211ED94C610038E066 /* Supporting Files */,
+				A0C7742C1ED9292400A4896E /* Main.storyboard */,
+				A0C774281ED9292400A4896E /* Assets.xcassets */,
+				A0C7742A1ED9292400A4896E /* LaunchScreen.storyboard */,
 			);
 			name = Spider;
 			path = Target;
 			sourceTree = "<group>";
-		};
-		A0C774291ED9292400A4896E /* Base.lproj */ = {
-			isa = PBXGroup;
-			children = (
-				A0C7742A1ED9292400A4896E /* LaunchScreen.storyboard */,
-				A0C7742C1ED9292400A4896E /* Main.storyboard */,
-			);
-			name = Base.lproj;
-			path = Spider/Base.lproj;
-			sourceTree = SOURCE_ROOT;
 		};
 		A0C7742E1ED9292400A4896E /* Config */ = {
 			isa = PBXGroup;
@@ -330,15 +326,13 @@
 		A0C774421ED9292400A4896E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A0C774431ED9292400A4896E /* BaseTableView.h */,
-				A0C774441ED9292400A4896E /* BaseTableView.m */,
+				A0C7744B1ED9292400A4896E /* TableViewCell */,
 				A0C774451ED9292400A4896E /* JYAlertControllerManager.h */,
 				A0C774461ED9292400A4896E /* JYAlertControllerManager.m */,
 				A0C774471ED9292400A4896E /* JYImageView.h */,
 				A0C774481ED9292400A4896E /* JYImageView.m */,
-				A0C774491ED9292400A4896E /* JYProgressHUD.h */,
-				A0C7744A1ED9292400A4896E /* JYProgressHUD.m */,
-				A0C7744B1ED9292400A4896E /* TableViewCell */,
+				A0B950081EDE9F6B0022373A /* JYProgressHUD.h */,
+				A0B950091EDE9F6B0022373A /* JYProgressHUD.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -375,7 +369,6 @@
 				A0C774641ED9292400A4896E /* HcdDateTimePicker */,
 				A0C7746B1ED9292400A4896E /* JYAlertController */,
 				A0C7746E1ED9292400A4896E /* JYNavTransition */,
-				A0C774751ED9292400A4896E /* MBProgressHUD+JDragon */,
 			);
 			name = Library;
 			path = Spider/Library;
@@ -426,13 +419,6 @@
 			path = JYNavTransition;
 			sourceTree = "<group>";
 		};
-		A0C774751ED9292400A4896E /* MBProgressHUD+JDragon */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "MBProgressHUD+JDragon";
-			sourceTree = "<group>";
-		};
 		A0C774771ED9292400A4896E /* Sections */ = {
 			isa = PBXGroup;
 			children = (
@@ -447,15 +433,15 @@
 		A0C774781ED9292400A4896E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A0C7747E1ED9292400A4896E /* TargetHomeNavigationController.h */,
+				A0C7747F1ED9292400A4896E /* TargetHomeNavigationController.m */,
+				A0C774801ED9292400A4896E /* TargetHomeViewController.h */,
+				A0C774811ED9292400A4896E /* TargetHomeViewController.m */,
 				A0C774791ED9292400A4896E /* TargetAddOrEditViewController.h */,
 				A0C7747A1ED9292400A4896E /* TargetAddOrEditViewController.m */,
 				A0C7747B1ED9292400A4896E /* TargetAddRecordViewController.h */,
 				A0C7747C1ED9292400A4896E /* TargetAddRecordViewController.m */,
 				A0C7747D1ED9292400A4896E /* TargetAddRecordViewController.xib */,
-				A0C7747E1ED9292400A4896E /* TargetHomeNavigationController.h */,
-				A0C7747F1ED9292400A4896E /* TargetHomeNavigationController.m */,
-				A0C774801ED9292400A4896E /* TargetHomeViewController.h */,
-				A0C774811ED9292400A4896E /* TargetHomeViewController.m */,
 				A0C774821ED9292400A4896E /* TargetLogsViewController.h */,
 				A0C774831ED9292400A4896E /* TargetLogsViewController.m */,
 				A0C774841ED9292400A4896E /* TargetLogsViewController.xib */,
@@ -758,7 +744,6 @@
 				A0C774D01ED9292400A4896E /* TargetAddOrEditViewController.m in Sources */,
 				A0C774BB1ED9292400A4896E /* IconTextFieldTableViewCell.m in Sources */,
 				A0C774C11ED9292400A4896E /* TextFieldTableViewCell.m in Sources */,
-				A0C774B51ED9292400A4896E /* BaseTableView.m in Sources */,
 				A0C774CC1ED9292400A4896E /* JYNavAnimation.m in Sources */,
 				A0C774C91ED9292400A4896E /* MXSCycleScrollView.m in Sources */,
 				A0C774BF1ED9292400A4896E /* MonoTextViewTableViewCell.m in Sources */,
@@ -783,6 +768,7 @@
 				A0C774E71ED9292400A4896E /* StringHelper.m in Sources */,
 				A0C774AA1ED9292400A4896E /* AppDelegate.m in Sources */,
 				A0C774D81ED9292400A4896E /* TargetRecordManager.m in Sources */,
+				A0B9500A1EDE9F6B0022373A /* JYProgressHUD.m in Sources */,
 				A0C774D71ED9292400A4896E /* TargetManager.m in Sources */,
 				A0C774CA1ED9292400A4896E /* UIColor+HcdCustom.m in Sources */,
 				A0C774D11ED9292400A4896E /* TargetAddRecordViewController.m in Sources */,
@@ -799,7 +785,6 @@
 				A0C774CD1ED9292400A4896E /* JYNavigationController.m in Sources */,
 				A0C774B71ED9292400A4896E /* JYImageView.m in Sources */,
 				A0C774CE1ED9292400A4896E /* JYNavInteractiveTransition.m in Sources */,
-				A0C774B81ED9292400A4896E /* JYProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -827,6 +812,7 @@
 				A0C7742B1ED9292400A4896E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = ../Spider/Base.lproj;
 			sourceTree = "<group>";
 		};
 		A0C7742C1ED9292400A4896E /* Main.storyboard */ = {
@@ -835,6 +821,7 @@
 				A0C7742D1ED9292400A4896E /* Base */,
 			);
 			name = Main.storyboard;
+			path = ../Spider/Base.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

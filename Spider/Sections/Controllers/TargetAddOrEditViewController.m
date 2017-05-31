@@ -209,7 +209,7 @@
     PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
     if (status == PHAuthorizationStatusDenied || status == PHAuthorizationStatusRestricted) {
         // 无图片访问权限 "请在iPhone的“设置-隐私-照片"选项中，允许微信访问你的手机相册"
-        [JYProgressHUD showLongerTextHUDWithString:@"请在iPhone的“设置-隐私-照片“选项中，允许Target访问你的手机相册" AddedTo:self.view];
+        [JYProgressHUD showLongerTextHUDWithContent:@"请在iPhone的“设置-隐私-照片“选项中，允许Target访问你的手机相册" AddedTo:self.view completion:nil];
     } else {
         [self presentViewController:self.imagePickerController animated:YES completion:nil];
     }
